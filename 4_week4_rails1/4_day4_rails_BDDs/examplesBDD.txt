@@ -1,0 +1,67 @@
+MOOCademy
+
+Cours
+- cours_title:string [uniquen, max 40 chars, present]
+- cours_description:string [max 40 chars, present]
+- cours_author:string [max 30 chars, present]
+
+- has_many_lessons
+
+Lessons
+- title:strting [max 20 chars, present]
+- body:string [present]
+
+
+
+
+The HACKING PINTEREST
+
+Users
+-username:string [unique,present]
+
+-has_many_pins
+-has_many_comments
+
+Pins
+-url_img:string [present]
+-author_id[present]
+
+-has_many_comments
+
+Comments
+- content:string[present, max 200 char]
+- author_id[present]
+-belongs_to : user
+
+
+
+THE HACKING NEWS
+Users
+-username:string [unique,present, 5-20 char]
+-email:string [unique,present 5-30char] 
+
+-has_many_links
+-has_many_comments
+
+Link
+-lin_url:string [unique, present, min 20 char]
+- username_id
+- belongs_to : user
+-has_many_comments as :commendable
+
+Comments
+-content:string
+-belons_to : commendable, polymorphic: true
+-has_many: comment, as:commentable
+
+THE HACKING CLASS
+
+Studentsthp
+- student_id: string
+- belongs_to: classes
+
+Classes
+- cours_title:string [unique, max 40 chars, present]
+- cours_description:string [max 40 chars, present]
+-has_many : students
+

@@ -1,0 +1,144 @@
+<nav>
+  <div class="container-fluid top-navbar">
+    <%= image_tag('newsweek_logo.svg') %>
+    <div id="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+</nav>
+  
+<div id="main" class="container">
+
+  <section id="top-news">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <div id="top-article">
+          <img src="http://s.newsweek.com/sites/www.newsweek.com/files/styles/desktop/public/2017/11/17/rtx10u4d.jpg" alt="trump family">
+          <h3>Trump Inflated His Company's Revenue, Reports Suggest</h3>
+          <p>Donald Trump flagrantly lied about Trump Organization's revenue for years, according to Crain's.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div id="trending-articles">
+          <ul>
+            <li><h4>Latest Headlines</h4></li>
+            <li>Can Liverpool Ruin Man City’s January Transfer Plans?</li>
+            <li>Charles Manson, Murderous Cult Leader, Dead at 83</li>
+            <li>Manspreader Punches Woman In The Face</li>
+            <li>Liberals Even Miss Obama's Dog: SNL Wants Barack Back</li>
+            <li>'Family Values' Republican Guilty of Sex Trafficking</li>
+            <li>Melania To Take In White House Christmas Tree Early</li>
+            <li>Turkish Capital Bans LGBT Activism, Cites 'Security'</li>
+          </ul>
+        </div>
+        <div id="newsletter-sign-up">
+          <div id="n-box"><p>N</p></div>
+          <h5>Sign up for<br>our newsletter</h5>
+          <a href="#">Sign Up</a>
+          <p>Update your preferences »</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alternative-news">
+        <div id="second-article" class="row">
+            <% (1..11). each do |i| %>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <h4 class="over-title">U.S.</h4>
+              <img src="http://s.newsweek.com/sites/www.newsweek.com/files/styles/mobile/public/2017/11/17/rtsl644_0.jpg" alt="bomber plane" width="100%">
+              <h3>Russia to Give New Missiles to Planes Bombing ISIS</h3>
+              <p>As Tu-22M3 supersonic bombers blasted the last of ISIS in Syria, Russia announced the new Tu-22M3M fitted with missiles that can soar 130,000 feet and attack 620 miles away.</p>
+          </div>
+          <% end %>
+        </div>
+  </section>
+
+ <!-- In the magazine -->
+  <section class="in-the-magazine">
+
+    <div clas="row">
+          <h5><span id="n-box-2"> N </span> IN THE MAGAZINE</h5>
+    </div>  
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12">
+    <div id="theCarousel" class="carousel slide multi-item-carousel" data-ride="carousel">
+
+      <div class="carousel-inner">
+         <div class="item active">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <h4 class="over-title">U.S.</h4>
+                    <img src="http://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2017/11/05/saoirse-ronan-new-film-lady-bird.png" alt="bomber plane" width="100%">
+                    <h3>Russia to Give New Missiles to Planes Bombing ISIS</h3>
+                    <p>As Tu-22M3 supersonic bombers blasted the last of ISIS in Syria, Russia announced the new Tu-22M3M fitted with missiles that can soar 130,000 feet and attack 620 miles away.</p>
+                </div>
+         </div>
+         <% (1..7).each do |i| %>
+         <div class="item">
+                  <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <h4 class="over-title">U.S.</h4>
+                    <img src="http://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2017/11/13/1311canavero.jpg" alt="bomber plane" width="100%">
+                    <h3>Russia to Give New Missiles to Planes Bombing ISIS</h3>
+                    <p>As Tu-22M3 supersonic bombers blasted the last of ISIS in Syria, Russia announced the new Tu-22M3M fitted with missiles that can soar 130,000 feet and attack 620 miles away.</p>
+                </div>
+          </div> 
+          <% end %>  
+       </div>
+
+          <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+          
+          <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+  </section>
+
+
+<div class="container">
+  <h1>Use Bootstrap's carousel to show multiple items per slide.</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="carousel slide multi-item-carousel" id="theCarousel">
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/f44336/000000" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/e91e63/000000" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/9c27b0/000000" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/673ab7/000000" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/4caf50/000000" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/8bc34a/000000" class="img-responsive"></a></div>
+          </div>
+          <!-- add  more items here -->
+          <!-- Example item start:  -->
+          
+          <div class="item">
+            <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/8bc34a/000000" class="img-responsive"></a></div>
+          </div>
+          
+          <!--  Example item end -->
+        </div>
+        <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+        <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>

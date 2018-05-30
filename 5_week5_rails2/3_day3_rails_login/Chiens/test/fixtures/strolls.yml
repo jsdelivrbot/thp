@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2017-11-02 12:23:50
+  name: MyString
+  dog_id: 1
+  dogsitter_id: 1
+
+two:
+  date: 2017-11-02 12:23:50
+  name: MyString
+  dog_id: 1
+  dogsitter_id: 1

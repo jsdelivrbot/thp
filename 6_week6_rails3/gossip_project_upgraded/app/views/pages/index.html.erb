@@ -1,0 +1,15 @@
+<% content_for :top_content do %>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Welcome to the Gossip App!</h1>
+      <% if !(mousaillon_signed_in?) %>
+      <p>Register to get started.</p>
+      <p>
+        <%= link_to 'Register', new_mousaillon_registration_path, class: 'btn btn-primary btn-lg' %>
+      </p>
+      <% else %>
+              <%= link_to 'Gossips', gossips_path, class: 'btn btn-primary btn-lg' %>
+      <% end %>
+    </div>
+  </div>
+  <% end %>

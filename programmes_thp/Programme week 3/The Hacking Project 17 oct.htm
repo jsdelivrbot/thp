@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://thehackingproject.herokuapp.com/cursus/semaine-3/jour-2 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+
+    <link rel="stylesheet" media="all" href="./The Hacking Project 17 oct_files/application-ba8fc79d1e4588a4c69e3f966347dc2eb61d17b52132876debcdbcac2c3cd82a.css" data-turbolinks-track="reload">
+    <script src="./The Hacking Project 17 oct_files/application-abf83992d090a5fed5bf6ac842659c74ebb351307a43f1f2a319751e18653507.js" data-turbolinks-track="reload"></script>
+  <script src="./The Hacking Project 17 oct_files/jquery.validate.min.js"></script>
+	<script src="./The Hacking Project 17 oct_files/additional-methods.min.js"></script>
+  <link rel="stylesheet" href="./The Hacking Project 17 oct_files/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="./The Hacking Project 17 oct_files/tether.min.js"></script>
+  <script src="./The Hacking Project 17 oct_files/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <title>The Hacking Project</title><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="fRh6EfjTk5eAsy/tkTkV1PvFlMM+5449rnaOpjq+MxcO+4L+iazatILBEXPn3ySFe2MwOhwB6vq7TXVZrbyehA=="></head>
+
+  <body>
+    <br><br><br>
+    <div class="container">
+      <h1>Mardi 17 octobre : Envoyer des emails</h1>
+<h2>1. Correction de pairs</h2>
+<p>Vous allez faire de la correction de pairs. C'est à dire que vous allez vous corriger entre vous.</p>
+
+<h5>À faire</h5>
+
+<ul>
+	<li>Prenons l'exemple de Jean, Paul, Marie, et Julie dans un groupe. Jean va corriger Paul, Paul va corriger Marie, Marie va corriger Julie, et Julie va corriger Jean. Fais donc la même chose pour ton groupe</li>
+	<li>Corrige la copie de ton camarade. Comment faire ? 
+	<ul>
+		<li>Le code doit être uploadé sur GitHub, et le dossier ne doit pas trop être bordélique</li>
+		<li>Suis <a href="https://thehackingproject.herokuapp.com/cursus/semaine-2/jour-2">les guidelines du code propre</a>, et si la personne ne les respecte pas, balance les retours, avec pourquoi pas une recommandation de comment il fallait faire</li>
+		<li>Si tu te sens chaud, tu peux faire des retours qui ne sont pas dans les guidelines, mais que tu peux donner pour rendre le code de ton camarade plus lisible. Par exemple il utilise une boucle for, alors qu'une boucle .each aurait été plus appropriée</li>
+		<li>Pour cette fois-ci, tu peux réaliser les retours sur le support de ton choix (je te conseille le face à face, ou bien un nouveau dossier GitHub</li>
+	</ul></li>
+	<li>Reprends ton code, essaie de voir comment tu aurais pu l'améliorer</li>
+</ul>
+
+<h2>2. Ressources</h2>
+<h3>a. Gem Gmail</h3>
+<p>Aujourd'hui, tu vas apprendre à envoyer des emails en passant par l'interface puissante de Gmail.</p>
+<h5>À faire</h5>
+<ul>
+	<li>Découvre la <a href="https://github.com/gmailgem/gmail">gem gmail</a> de ruby</li>
+	<li>Essaie de te login, et d'envoyer un premier email</li>
+</ul>
+
+<h2>3. Projet</h2>
+<p>⚠️ <b>ATTENTION</b> ⚠️ Le projet du jour est validant ⚠️ <b>ATTENTION</b> ⚠️<br>
+Il est <b>indispensable</b> que tu le soumettes avant 23h59 aujourd'hui. Plus d'information sur les projets validant dans <a href="https://thehackingproject.herokuapp.com/modalites">la page des modalités</a>. Voici le lien <a href="https://thehackingproject.herokuapp.com/users/validating-forms/form-5">du formulaire</a> à compléter.
+</p>
+
+
+<p>Ce projet te donnera les compétences de manipuler des gems à la fois, et de faire des beaux rapprochements pour des programmes stylays.<br><br>
+Pour ce programme, nous allons te faire travailler sur un cas concret pour The Hacking Project car 
+</p><ul>
+	<li>nous l'aurions fait nous-même</li>
+	<li>cela fait travailler pour un cas concret d'entreprise</li>
+	<li>qui de mieux que les moussaillons pour parler de The hacking Project ❤️</li>
+</ul>
+Alors oui c'est un peu chaffouin dans la démarche, mais comme dirait un célèbre philosophe : "YOLO".<p></p>
+
+<h3>a. Envoi d'emails</h3>
+<p>Le CEO de get-email-corp est vraiment ravi de ton travail. Il veut donc te nommer en charge de la filliale send-email-corp, qui vient de décrocher un contrat à 300k€ pour une startup qui s'appelle The Hacking Project. Ta mission est d'envoyer un email à toutes les mairies du 80, pour leur dire que tu es élève à The Hacking Project, et que tu aimerais voir ce modèle du peer-learning exister dans ce beau département qu'est le 80</p>
+
+<p>Voici la marche à suivre :</p>
+
+<ul>
+	<li>Tu vas devoir crééer un programme scrapping.rb qui va utiliser le code de scrapping du projet de vendredi pour récupérer les adresses emails des mairies du 80, voire un ou plusieurs autres départements si tu te sens chaud la braise
+	<ul>
+		<li>Ton programme ira engregistrer tous tes scrappings dans un beau fichier Google Spreadsheet, un peu comme ce que tu as fait hier</li>
+	</ul></li>
+	<li>Après, tu vas créér un programme send_emails.rb, qui va reprendre chaque colonne de ton Spreadsheet, et qui va envoyer un bel email à la mairie indiquée. Pour ceux qui ont peur d'utiliser leur adresse Gmail perso, vous êtes bien entendu libres d'utiliser une adresse d'une fausse personne, comme par exemple "Théophile Coutaind", vous n'aurez qu'à nous transférer les emails vers nous.
+	<ul>
+		<li>Une méthode <code>send_email_to_line</code> fait très bien l'affaire. Elle prendra l'email en colonne B, et lui enverra un message, qui pourra être alterné en fonction du nom de la mairie en colonne A.</li>
+		<li>Tu peux la coupler à une méthode <code>go_through_all_the_lines</code></li>
+		<li>Je te conseille de faire une méthode <code>get_the_email_html</code> qui prend le nom de la ville concernée, et qui renvoie un beau HTML</li>
+		<li>(Aussi, nous te conseillons de partir sur un fichier sreadsheet qui contient des adresses email tests afin de voir si ça marche, avant d'envoyer la masse)</li>
+	</ul></li>
+	<li>Pour l'email, tu peux créér un truc simple en HTML qui dit un truc du genre : <br>
+<pre><code>Bonjour,
+Je m'appelle Louis, je suis élève à une formation de code gratuite, ouverte à tous, sans restriction géographique, ni restriction de niveau. La formation s'appelle The Hacking Project (http://thehackingproject.org/). Nous apprenons l'informatique via la méthode du peer-learning : nous faisons des projets concrets qui nous sont assignés tous les jours, sur lesquel nous planchons en petites équipes autonomes. Le projet du jour est d'envoyer des emails à nos élus locaux pour qu'ils nous aident à faire de The Hacking Project un nouveau format d'éducation gratuite.
+
+Nous vous contactons pour vous parler du projet, et vous dire que vous pouvez ouvrir une cellule à {townhall_name}, où vous pouvez former gratuitement 6 personnes (ou plus), qu'elles soient débutantes, ou confirmées. Le modèle d'éducation de The Hacking Project n'a pas de limite en terme de nombre de moussaillons (c'est comme cela que l'on appelle les élèves), donc nous serions ravis de travailler avec {townhall_name} !
+
+Charles, co-fondateur de The Hacking Project pourra répondre à toutes vos questions : 06.95.46.60.80
+</code></pre>
+	<ul>
+		<li>Bref, à toi de voir quel wording est le mieux, demande aux experts en CRM pour des bow wordings stylay ;)</li></ul></li>
+</ul>
+    </div>
+    <br><br><br><br><br><br>
+
+<footer class="footer">
+  <div class="container">
+    <span class="text-muted">© <a href="http://www.thehackingproject.org/mentions">The Hacking Project, 2017</a></span>
+  </div>
+</footer>
+
+  
+
+</body></html>

@@ -1,0 +1,61 @@
+<h1>This is a nice Corsaire </h1>
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Age</th>
+        <th>Bio</th>
+        <th>Slack Handle</th>
+        <th>GitHub Handle</th>
+        <th>Likeness</th>
+    </tr>
+    <tr>
+        <td>
+            <%= @corsaire.first_name %>
+        </td>
+        <td>
+            <%= @corsaire.age %>
+        </td>
+        <td>
+            <% if @corsaire.bio != nil %>
+                 <%=@corsaire.bio%>
+            <% else %>
+                TbF
+            <% end %>
+        </td>
+        <td>
+            <% if @corsaire.slack_handle != nil %>
+                 <%=@corsaire.slack_handle%>
+            <% else %>
+                TbF
+            <% end %>
+        </td>
+        <td>
+            <% if @corsaire.github_handle != nil %>
+                 <%=@corsaire.github_handle%>
+            <% else %>
+                TbF
+            <% end %>
+        </td>
+        <td>
+            <% if @corsaire.likeness != nil %>
+                 <%=@corsaire.likeness%>
+            <% else %>
+                TbF
+            <% end %>
+        </td>
+    </tr>
+</table>
+</br>
+</br>
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <%= link_to "Edit", edit_corsaire_path %>
+            </td>
+            <td>
+                <%= link_to "Return to homepage", root_path %>
+            </td>
+        </tr>
+    </tbody>
+</table>

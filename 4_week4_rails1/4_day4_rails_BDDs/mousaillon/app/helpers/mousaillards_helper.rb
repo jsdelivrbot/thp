@@ -1,0 +1,2 @@
+module MousaillardsHelper
+end

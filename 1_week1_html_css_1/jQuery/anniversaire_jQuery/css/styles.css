@@ -1,0 +1,79 @@
+body {
+  background-color: #85cff7;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+h1 {
+  margin-top: 10%;
+}
+
+/*    */
+#list_section {
+position: ;
+margin: 0 auto;  
+width:40%;
+height: 12%;
+}
+
+/*  Mise en forme premire bloc: fond blanc etc;  */
+#bouton {
+  
+  text-align: center;
+
+  color: white;
+  background-color: #fff;
+  color: #000;
+  font-size: 2em;
+  padding: 1em;
+  border: 1px solid #000;
+}
+
+/*  centrage des deux premiers boutons dans le premier bloc */
+.center {
+ display: inline-block;
+vertical-align: middle;
+padding:10px; 
+margin:0 10px; 
+}
+
+
+/*  Mise en forme petit bouton bleu première action  */
+#clickme {
+  background-color: #85cff7;
+  color: black;
+  width: 5em;
+  height: 1.1em;
+
+  border-radius: 7px;
+  font-size: 0.5em;
+}
+
+
+
+.liste {
+  text-align: center;
+
+  color: white;
+ 
+  color: #000;
+  font-size: 1.7em;
+
+  border-radius: 10px;
+  border: 1px solid #000;
+  margin-top: 3em;
+  margin-bottom: 3em;
+
+  padding: 0.5em;
+}
+
+.red {
+   background-color: #ff95d4;
+}
+
+.yellow{
+   background-color: #ffec8a;
+}
+
+.green {
+   background-color: #3affcb;
+}

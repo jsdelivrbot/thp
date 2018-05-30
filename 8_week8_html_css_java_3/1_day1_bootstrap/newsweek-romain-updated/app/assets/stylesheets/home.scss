@@ -1,0 +1,210 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// == COLORS ==
+$red: #F42722;
+$grey: #3D3C3C;
+$light-grey: #D9D9D9;
+$blue: #29A6E9;
+
+// == FIX ==
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F4F5F6;
+}
+
+.top-navbar {
+  background-color: $red;
+  text-align: center;
+  padding: 10px;
+  img {
+    width: 250px;
+    margin: auto;
+  }
+  #burger {
+    width: 30px;
+    height: 30px;
+    float: right;
+    text-align: center;
+    padding: 5px 0;
+    display: none;
+    .line {
+      height: 3px;
+      width: 80%;
+      background-color: #fff;
+      border-radius: 50px;
+    }
+    .line:nth-child(2) {
+      margin-top: 5px
+    }
+    .line:last-of-type {
+      margin-top: 5px;
+    }
+  }
+}
+
+#main {
+  background-color: #fff;
+  margin: 0 3%;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+
+#top-news {
+  padding: 40px;
+  img {
+    width: 100%;
+  }
+  ul {
+    padding: 0;
+  }
+  #top-article {
+    border-bottom: 1px solid $light-grey;
+  }
+
+  #trending-articles {
+    li {
+      list-style-type: none;
+      padding: 10px 0;
+      border-bottom: 1px solid $light-grey;
+      h4 {
+        text-transform: uppercase;
+        margin: 0;
+        font-size: .9em;
+      }
+    }
+    li:last-of-type {
+      border-bottom: none;
+    }
+    li:first-of-type {
+      margin: 0;
+      padding: 0 0 20px 0;
+    }
+  }
+  #newsletter-sign-up {
+    background-color: #F4F5F6;
+    border: 1px solid $light-grey;
+    border-radius: 2px;
+    padding: 20px;
+    h5 {
+      text-transform: uppercase;
+      font-size: 1.1em;
+      margin: 0;
+    }
+    a {
+      padding: 10px;
+      background-color: $grey;
+      text-transform: uppercase;
+      color: #fff;
+      display: block;
+      margin: 15px 0;
+      text-align: center;
+      width: 80px;
+    }
+    p {
+      font-weight: bold;
+    }
+  }
+}
+
+.over-title {
+  color:red;
+  font-weight:bold;
+}
+  
+
+#second-article {
+    margin: 40px 0;
+  }
+
+#n-box {
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      line-height: 30px;
+      background-color: $red;
+      font-weight: bold;
+      color: #fff;
+      font-size: 1.5em;
+      margin-right: 10px;
+      float:left; 
+}
+
+#n-box-2 {
+      height: 30px;
+      width: 40px;
+      text-align: center;
+      line-height: 30px;
+      background-color: $red;
+      font-weight: bold;
+      color: #fff;
+      font-size: 1.5em;
+      margin-right: 10px;
+      padding-left: 5px;
+}
+
+.in-the-magazine {
+  text-align: center;
+  border-bottom: 1px solid $light-grey;
+  div {
+    margin-bottom: 10px;
+  }
+}
+
+.third-articles {
+    margin: 10px 10px;
+    div {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+// == MEDIA QUERIES ==
+@media screen and (max-width: 991px) {
+  .top-navbar {
+    #burger {
+      display: block;
+    }
+  }
+}
+
+// Carousel //
+
+.multi-item-carousel{
+  .carousel-inner{
+    > .item{
+      transition: 500ms ease-in-out left;
+    }
+    .active{
+      &.left{
+        left:-33%;
+      }
+      &.right{
+        left:33%;
+      }
+    }
+    .next{
+      left: 33%;
+    }
+    .prev{
+      left: -33%;
+    }
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      > .item{
+        // use your favourite prefixer here
+        transition: 500ms ease-in-out left;
+        transition: 500ms ease-in-out all;
+        backface-visibility: visible;
+        transform: none!important;
+      }
+    }
+  }
+  .carouse-control{
+    &.left, &.right{
+      background-image: none;
+    }
+  }
+}

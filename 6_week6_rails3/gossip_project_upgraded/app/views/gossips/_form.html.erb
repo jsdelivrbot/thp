@@ -1,0 +1,28 @@
+<%= form_for @gossip do |f| %>
+    <% if @gossip.errors.any? %>
+        <div id="error_explanation">
+            <h2>
+        <%= pluralize(@gossip.errors.count, "error") %> prohibited
+        this gossip from being saved or updated:
+      </h2>
+            <ul>
+                <% @gossip.errors.full_messages.each do |msg| %>
+                    <li>
+                        <%= msg %>
+                    </li>
+                    <% end %>
+            </ul>
+        </div>
+        <% end %>
+            <div class="form-group">
+                <%= f.label :title %>
+                    <%= f.text_field :title, class: 'form-control' %>
+            </div>
+            </br>
+            <div class="form-group">
+                <%= f.label :content %>
+                    <%= f.text_field :content, class: 'form-control' %>
+            </div>
+            </br>
+            <%= f.submit "Submit", class: 'btn btn-primary' %>
+                <% end %>

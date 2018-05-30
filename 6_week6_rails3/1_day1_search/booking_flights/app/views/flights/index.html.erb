@@ -1,0 +1,66 @@
+<h1>Book your flight from available destinations</h1>
+<div>
+    <%= form_tag(root_path, method: :get) do %>
+        <div>
+            <%= label_tag ("Departure airport") %>
+                <%= select_tag(:search_departure_airport_id, options_for_select(@airports_options, :selected => params[:search_departure_airport_id])) %>
+        </div>
+        <div>
+            <%= label_tag ("Arrival airport") %>
+                <%= select_tag(:search_arrival_airport_id, options_for_select(@airports_options, :selected => params[:search_arrival_airport_id])) %>
+        </div>
+        <div>
+            <%= label_tag ("Date") %>
+                <%= select_tag(:search_departure_date, options_for_select(@dates_options, :selected => params[:search_departure_date])) %>
+        </div>
+        <div>
+            <%= label_tag ("Number of passengers") %>
+                <%= select_tag(:search_number_passengers, options_for_select(@passengers_options,:selected => params[:search_number_passengers])) %>
+        </div>
+        <%= submit_tag 'Search', name: nil %>
+            <% end %>
+</div>
+</br>
+<% if params[:search_departure_date] %>
+    <% if @flights.empty? %>
+        <h2> Sorry, no flights found </h2>
+        <% else %>
+            <%= form_tag 'bookings/new', method: :get do %>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Select flight</th>
+                                <th> Duration (min) </th>
+                                <th>Departure_date</th>
+                                <th>Airport Departure code</th>
+                                <th>Airport Arrival code </th>
+                            </tr>
+                        </thead>
+                        <% @flights.each do |flight| %>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <%= radio_button_tag :flight_id, flight.id %>
+                                        <%= label_tag(:booked, "") %>
+                                </td>
+                                <td>
+                                    <%= flight.duration %>
+                                </td>
+                                <td>
+                                    <%= flight.departure_date.strftime("%d/%m/%Y") %>
+                                </td>
+                                <td>
+                                    <%= flight.departure_airport.airport_code %>
+                                </td>
+                                <td>
+                                    <%= flight.arrival_airport.airport_code %>
+                                </td>
+                            </tr>
+                            <% end %>
+                        </tbody>
+                    </table>
+                     <%= hidden_field_tag :search_number_passengers, params[:search_number_passengers]%>
+                    <%= submit_tag "Choose Flight" %>
+                    <% end %>
+                        <% end %>
+                            <% end %>

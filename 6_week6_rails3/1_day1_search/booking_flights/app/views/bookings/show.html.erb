@@ -1,0 +1,15 @@
+<h1>Your booking recap </h1>
+
+<div class="jumbotron">
+   <div> Your departure date: <%= @flight.departure_date%> </div>
+   <div> Departure Airport: <%= @flight.departure_airport.airport_code %> </div>
+   <div> Arrival Airport: <%= @flight.arrival_airport.airport_code %></div>
+   <div> Flight duration: <%= @flight.duration%></div>
+</div>
+
+<h3>Passenger Information</h3>
+
+  <% @passengers.each do |passenger| %>
+       <div> Name: <%= passenger.name %> </div>
+       <div> Email: <%= passenger.email %> </div>
+  <% end %>

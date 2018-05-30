@@ -1,0 +1,256 @@
+<div id="global-container">
+
+<!-- Nav bar-->
+<nav>
+  <!-- First layer-->
+  <div class="ib" id="first-nav-layer">
+    
+
+      <!-- Buttons left side -->
+        <div class="ib sub-div-left">
+            <button class="btn-type-1">
+               <i class="material-icons">menu</i>
+               <a>SECTIONS</a>
+            </button>
+            <button class="ib btn-type-2">
+               <%= image_tag 'logo-nyt-small.jpg', :size => "16x16" %>
+               <a> HOME</a>
+            </button>
+            <button class="ib btn-type-2">
+               <i class="material-icons">search</i>
+               <a> SEARCH</a>
+            </button>
+        </div>
+      <!-- Logo center -->
+        <div class="ib" id="container-main-logo">
+          <a href="https://www.nytimes.com/"><%= image_tag 'nyt-logo.png'%></a>
+        </div>
+      <!-- Buttons right side -->
+        <div class="ib sub-div-right">
+          <button class="ib btn-type-2">
+              <i class="material-icons">settings</i>
+          </button>
+          <button class="ib btn-type-3">
+              SUBSCRIBE NOW
+          </button>
+          <button class="ib btn-type-3">
+              LOGIN
+          </button>
+          
+        </div>
+  </div>
+  <!-- Second layer-->
+  <div id="second-nav-layer" class="ib">
+      <!-- First thumbnail -->
+      <div class="post-container ib">                
+          <div class="post-thumb"><%= image_tag 'planet.jpg', :size => "65x65" %></div>
+          <div class="post-content">
+              <h6 class="post-title">Post title</h6>
+              <p> Post description Post description  Post description  Post description  Post description  </p>
+         </div>
+      </div>
+      <!-- Second thumbnail -->
+      <div class="post-container ib">                
+          <div class="post-thumb"><%= image_tag 'planet.jpg', :size => "65x65" %></div>
+          <div class="post-content">
+              <h6 class="post-title">Post title</h6>
+              <p> Post description Post description  Post description  Post description  Post description  </p>
+         </div>
+      </div>
+      <!-- Third thumbnail -->
+      <div class="post-container ib">                
+          <div class="post-thumb"><%= image_tag 'planet.jpg', :size => "65x65" %></div>
+          <div class="post-content">
+              <h6 class="post-title">Post title</h6>
+              <p> Post description Post description  Post description  Post description  Post description  </p>
+         </div>
+      </div>
+      <!-- Fourth thumbnail -->
+      <div class="post-container ib">                
+          <div class="post-thumb"><%= image_tag 'planet.jpg', :size => "65x65" %></div>
+          <div class="post-content">
+              <h6 class="post-title">Post title</h6>
+              <p> Post description Post description  Post description  Post description  Post description  </p>
+         </div>
+      </div>
+
+      <!-- Fifth thumbnail -->
+      <div class="post-container ib">                
+          <div class="post-thumb"><%= image_tag 'planet.jpg', :size => "65x65" %></div>
+          <div class="post-content">
+              <h6 class="post-title">Post title</h6>
+              <p> Post description Post description  Post description  Post description  Post description  </p>
+         </div>
+      </div>
+  
+  </div>
+</nav></br>
+
+<!-- Article part -->
+<section class="grid-wrapper">
+
+  <!-- Title Article -->
+  <hr>
+  <a href="https://www.nytimes.com/section/science/space?action=click&contentCollection=Space%20%26%20Cosmos&module=Kicker&region=Header&pgtype=article">SPACE & COSMOS</a>
+  </br></br></br>
+  <h1 id="headline">Space Ripples Reveal Big Bang’s Smoking Gun</h1></br>
+  <hr class="hr-light-grey">
+
+  <!-- Subtitle, Social and Image -->
+  <div class="article-details">
+      <p> By <a href="https://www.nytimes.com/by/dennis-overbye"> DENNIS OVERBYE </a></p>
+      <p>MARCH 17, 2014</p>
+      <!-- icons -->
+      <div class="article-details-icons">
+          <a href="#"><span id="fb-icon" class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse" aria-hidden="true"></i></span></a>
+          <a href="#"><span id="tw-icon" class="fa-stack fa-lg">
+              <i  class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse" aria-hidden="true"></i></span></a>
+          <a href="#"><span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-envelope fa-stack-1x fa-inverse" aria-hidden="true"></i></span></a>
+          <a href="#"><span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-share fa-stack-1x fa-inverse" aria-hidden="true"></i></span></a>
+      </div>
+      <!-- icons services -->
+      <div class="article-details-services">
+        <a href="#"><i class="fa fa-bookmark-o fa-2x" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-comment-o fa-2x" aria-hidden="true"></i></a>
+      </div>
+
+  </div></br>
+   <!-- Image -->
+      <div>
+        <%= image_tag 'photo.jpg', :width => "100%" %>
+      </div>
+   <!-- Comment image -->
+      <div class="ib comment-media">
+        <p>Alan Guth was one of the first physicists to hypothesize the existence of inflation, which explains how the universe expanded so uniformly and so quickly in the instant after the Big Bang 13.8 billion years ago <span> Rick Friedman for The New York Times</span></p>
+      </div>
+  <!-- Content Article -->
+       <div class="container-1">
+            <!-- First part article -->
+            <div class="content content-1"> 
+              <p>CAMBRIDGE, Mass. — One night late in 1979, an itinerant young physicist named Alan Guth, with a new son and a year’s appointment at Stanford, stayed up late with his notebook and equations, venturing far beyond the world of known physics.</p>
+              <p>He was trying to understand why there was no trace of some exotic particles that should have been created in the Big Bang. Instead he discovered what might have made the universe bang to begin with. A potential hitch in the presumed course of cosmic evolution could have infused space itself with a special energy that exerted a repulsive force, causing the universe to swell faster than the speed of light for a prodigiously violent instant.</p>
+              <p>If true, the rapid engorgement would solve paradoxes like why the heavens look uniform from pole to pole and not like a jagged, warped mess. The enormous ballooning would iron out all the wrinkles and irregularities. Those particles were not missing, but would be diluted beyond detection, like spit in the ocean.</p>
+             <p> “SPECTACULAR REALIZATION,” Dr. Guth wrote across the top of the page and drew a double box around it.</p>
+             <p>On Monday, Dr. Guth’s starship came in. Radio astronomers reported that they had seen the beginning of the Big Bang, and that his hypothesis, known undramatically as inflation, looked right.</p>
+            </div>
+            <!-- Advertisement -->
+            <div class="adv-1">
+              <hr>
+              <h2> ADVERTISEMENT: TbC </h2>
+              <hr>
+            </div>
+            <!-- Second part article -->
+            <div class="content content-2"> 
+              <p>Reaching back across 13.8 billion years to the first sliver of cosmic time with telescopes at the South Pole, a team of astronomers led by John M. Kovac of the Harvard-Smithsonian Center for Astrophysics detected ripples in the fabric of space-time — so-called gravitational waves — the signature of a universe being wrenched violently apart when it was roughly a trillionth of a trillionth of a trillionth of a second old. They are the long-sought smoking-gun evidence of inflation, proof, Dr. Kovac and his colleagues say, that Dr. Guth was correct.</p>
+              <p>Inflation has been the workhorse of cosmology for 35 years, though many, including Dr. Guth, wondered whether it could ever be proved.</p>
+              <p>If corroborated, Dr. Kovac’s work will stand as a landmark in science comparable to the recent discovery of dark energy pushing the universe apart, or of the Big Bang itself. It would open vast realms of time and space and energy to science and speculation.</p>
+              <p>Confirming inflation would mean that the universe we see, extending 14 billion light-years in space with its hundreds of billions of galaxies, is only an infinitesimal patch in a larger cosmos whose extent, architecture and fate are unknowable. Moreover, beyond our own universe there might be an endless number of other universes bubbling into frothy eternity, like a pot of pasta water boiling over.</p>
+              <h3>‘As Big as It Gets’</h3>
+              <p>In our own universe, it would serve as a window into the forces operating at energies forever beyond the reach of particle accelerators on Earth and yield new insights into gravity itself. Dr. Kovac’s ripples would be the first direct observation of gravitational waves, which, according to Einstein’s theory of general relativity, should ruffle space-time.</p>
+              <p>Marc Kamionkowski of Johns Hopkins University, an early-universe expert who was not part of the team, said, “This is huge, as big as it gets.”</p>
+              <p>He continued, “This is a signal from the very earliest universe, sending a telegram encoded in gravitational waves.”</p>
+              <p>The ripples manifested themselves as faint spiral patterns in a bath of microwave radiation that permeates space and preserves a picture of the universe when it was 380,000 years old and as hot as the surface of the sun.</p>
+              <p>Dr. Kovac and his collaborators, working in an experiment known as Bicep, for Background Imaging of Cosmic Extragalactic Polarization, reported their results in a scientific briefing at the Center for Astrophysics here on Monday and in a set of papers submitted to The Astrophysical Journal.</p>
+            </div>
+            <!-- Third part article - theory of inflation -->
+            <div class="content content-3">
+              <hr>
+              <h2> Theory of inflation </h2>
+              <hr>
+            </div>
+            <!-- Video -->
+            <div class="content content-4 comment-media">
+              <div class="container">
+              <iframe width="645" height="315" src="https://www.youtube.com/embed/ZlfIVEy_YOA" frameborder="0" gesture="media" allowfullscreen></iframe></div>
+              <p>Stanford Professor Andrei Linde celebrates physics breakthrough<span>  Video by StanfordUniversity</span></p>
+            </div>
+            <!-- Third part article - theory of inflation -->
+            <div class="content content-5">
+              <h3>Spirals in the Sky</h3>
+              <p>Gravity waves are the latest and deepest secret yet pried out of the cosmic microwaves, which were discovered accidentally by Arno Penzias and Robert Wilson at Bell Labs 50 years ago. They won the Nobel Prize.</p>
+              <p>Dr. Kovac has spent his career trying to read the secrets of these waves. He is one of four leaders of Bicep, which has operated a series of increasingly sensitive radio telescopes at the South Pole, where the thin, dry air creates ideal observing conditions. The others are Clement Pryke of the University of Minnesota, Jamie Bock of the California Institute of Technology and Dr. Kuo of Stanford.</p>
+              <p>“The South Pole is the closest you can get to space and still be on the ground,” Dr. Kovac said. He has been there 23 times, he said, wintering over in 1994. “I’ve been hooked ever since,” he said.</p>
+            </div>
+            <!-- Image -->
+            <div class="content content-6 comment-media"">
+                <%= image_tag 'snow.jpg', :width => "100%" %>
+                <p>The Bicep2 telescope, in the foreground, was used to detect the faint spiraling gravity patterns — the signature of a universe being wrenched violently apart at its birth. <span>  Credit Steffen Richter/Associated Press</span></p>
+            </div>
+            <!-- Fourth part article -->
+            <div class="content content-7"> 
+              <p>Reaching back across 13.8 billion years to the first sliver of cosmic time with telescopes at the South Pole, a team of astronomers led by John M. Kovac of the Harvard-Smithsonian Center for Astrophysics detected ripples in the fabric of space-time — so-called gravitational waves — the signature of a universe being wrenched violently apart when it was roughly a trillionth of a trillionth of a trillionth of a second old. They are the long-sought smoking-gun evidence of inflation, proof, Dr. Kovac and his colleagues say, that Dr. Guth was correct.</p>
+              <p>Inflation has been the workhorse of cosmology for 35 years, though many, including Dr. Guth, wondered whether it could ever be proved.</p>
+              <p>If corroborated, Dr. Kovac’s work will stand as a landmark in science comparable to the recent discovery of dark energy pushing the universe apart, or of the Big Bang itself. It would open vast realms of time and space and energy to science and speculation.</p>
+              <p>Confirming inflation would mean that the universe we see, extending 14 billion light-years in space with its hundreds of billions of galaxies, is only an infinitesimal patch in a larger cosmos whose extent, architecture and fate are unknowable. Moreover, beyond our own universe there might be an endless number of other universes bubbling into frothy eternity, like a pot of pasta water boiling over.</p>
+              <h3>‘As Big as It Gets’</h3>
+              <p>In our own universe, it would serve as a window into the forces operating at energies forever beyond the reach of particle accelerators on Earth and yield new insights into gravity itself. Dr. Kovac’s ripples would be the first direct observation of gravitational waves, which, according to Einstein’s theory of general relativity, should ruffle space-time.</p>
+              <p>Marc Kamionkowski of Johns Hopkins University, an early-universe expert who was not part of the team, said, “This is huge, as big as it gets.”</p>
+              <p>He continued, “This is a signal from the very earliest universe, sending a telegram encoded in gravitational waves.”</p>
+              <p>The ripples manifested themselves as faint spiral patterns in a bath of microwave radiation that permeates space and preserves a picture of the universe when it was 380,000 years old and as hot as the surface of the sun.</p>
+              <p>Dr. Kovac and his collaborators, working in an experiment known as Bicep, for Background Imaging of Cosmic Extragalactic Polarization, reported their results in a scientific briefing at the Center for Astrophysics here on Monday and in a set of papers submitted to The Astrophysical Journal.</p>
+            </div>
+       </div>
+  <!-- Content end of the article -->
+    <div class="container-2">
+        
+        <!-- Title content left -->
+        <div class="hr-11">
+          <hr>
+          <h4>More in space and cosmos</h4>
+        </br>
+        </div>
+        <!-- Title content right -->
+        <div class="hr-2">
+          <hr>
+          <h5>Trending</h5>
+          </br>
+        </div>
+        
+        <!-- Content left in container -->
+        <div class="container-3">
+            <div class="element-1">
+                <%= image_tag 'photo1.jpg', :width => "100%" %>
+                <a href="#">More in Space & Cosmos</a>
+            </div>
+            <div class="element-2">
+              <%= image_tag 'photo2.jpg', :width => "100%" %>
+              <a href="#">More in Space & Cosmos</a>
+            </div>
+            <div class="element-3">
+              <%= image_tag 'photo3.jpg', :width => "100%" %>
+              <a href="#">More in Space & Cosmos</a>
+            </div>
+            <div class="element-4">
+              <%= image_tag 'photo1.jpg', :width => "100%" %>
+              <a href="#">More in Space & Cosmos</a>
+            </div>
+            <div class="element-5">
+              <%= image_tag 'photo2.jpg', :width => "100%" %>
+              <a href="#">More in Space & Cosmos</a>
+            </div>
+            <div class="element-6">
+              <%= image_tag 'photo3.jpg', :width => "100%" %>
+              <a href="#">More in Space & Cosmos</a>
+            </div>
+        </div>
+
+        <!-- Content right in container -->
+        <div class="container-4">
+                <% (1..5).each do |l| %>
+
+                  <h3 class="el-<%=l%>-1"><%=l%>.</h3>
+                  <a href=#" class="el-<%=l%>-2">Contributing Op-Ed Writer: Why Men Aren’t Funny</a> 
+                  <div class="el-<%=l%>-3"><%= image_tag 'photo2.jpg', :width => "100%"%></div>
+
+                <% end %>
+    </div>
+</section>
+
+</div>  

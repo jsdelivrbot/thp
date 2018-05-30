@@ -1,0 +1,32 @@
+<h1>Such a nice gossip!!</h1>
+
+<table>
+    <tbody>
+        <tr>
+            <td>Content</td>
+            <td>Creation Date</td>
+            <td>Author</td>
+        </tr>
+        <tr>
+            <td><%= @gossip.content %></td>
+            <td><%= @gossip.created_at %></td>
+            <td><%= @gossip.author %></td>
+        </tr>
+    </tbody>
+</table> </br>
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <%= link_to "See Author page", @mousaillard %>
+            </td>
+            <td>
+                <%= link_to "Edit Gossip", edit_gossip_path %>
+            </td>
+            <td>
+                <%= link_to "Gossip list", gossips_path %>
+            </td>
+        </tr>
+    </tbody>
+</table>

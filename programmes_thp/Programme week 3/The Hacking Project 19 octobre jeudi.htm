@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://thehackingproject.herokuapp.com/cursus/semaine-3/jour-4 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+
+    <link rel="stylesheet" media="all" href="./The Hacking Project 19 octobre jeudi_files/application-ba8fc79d1e4588a4c69e3f966347dc2eb61d17b52132876debcdbcac2c3cd82a.css" data-turbolinks-track="reload">
+    <script src="./The Hacking Project 19 octobre jeudi_files/application-abf83992d090a5fed5bf6ac842659c74ebb351307a43f1f2a319751e18653507.js" data-turbolinks-track="reload"></script>
+  <script src="./The Hacking Project 19 octobre jeudi_files/jquery.validate.min.js"></script>
+	<script src="./The Hacking Project 19 octobre jeudi_files/additional-methods.min.js"></script>
+  <link rel="stylesheet" href="./The Hacking Project 19 octobre jeudi_files/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="./The Hacking Project 19 octobre jeudi_files/tether.min.js"></script>
+  <script src="./The Hacking Project 19 octobre jeudi_files/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <title>The Hacking Project</title><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="qCqikRBSsqr/qiUJSps3pOCC3f00EFDoo4jajvyFydrbyVp+YS37if3YG5c8fQb1YCR5BBb2NC+2syFxa4dkSQ=="></head>
+
+  <body>
+    <br><br><br>
+    <div class="container">
+      <h1>Jeudi 19 octobre : POO des champions, un tic-tac-toe</h1>
+<p>⚠️ <b>ATTENTION</b> ⚠️ Le projet du jour est validant ⚠️ <b>ATTENTION</b> ⚠️<br>
+Il est <b>indispensable</b> que tu le soumettes avant 23h59 aujourd'hui. Plus d'information sur les projets validant dans <a href="https://thehackingproject.herokuapp.com/modalites">la page des modalités</a>. Voici le lien <a href="https://thehackingproject.herokuapp.com/users/validating-forms/form-6">du formulaire</a> à compléter.
+</p>
+
+<p>Aujourd'hui, tu vas faire un programme from scratch qui va te faire manipuler les classes, et te faire jouer avec de l'abstrait. Ce programme sera le plus abstrait de la formation, mais il est indispensable de faire de l'abstrait pour mieux appréhender les problématiques de code.</p>
+
+<h2>Projet complet</h2>
+<p>Rien de tel que de coder un jeu pour les programme de POO ! Nous allons donc te demander de créer un <a href="https://fr.wikipedia.org/wiki/Tic-tac-toe?oldformat=true">Tic-Tac-Toe</a>, jeu follement passionnant. </p>
+
+<p>Voici les règles du programme : </p>
+<ul>
+	<li>le programme est à deux joueurs only (pas d'intelligence artificielle)</li>
+	<li>le programme doit commencer en demandant le prénom des joueurs</li>
+	<li>le programme doit afficher le plateau chaque tour (dans le terminal), puis demander au joueur auquel c'est le tour où ce dernier compte jouer</li>
+	<li>si un joueur gagne, le programme doit annoncer qui a gagné</li>
+	<li>s'il y a match nul, le programme doit annoncer qu'il y a match nul</li>
+</ul>
+
+<p>Ce n'est presque jamais facile de devoir faire un programme en partant de rien, donc voici des indices qui vont pouvoir t'aiguiller. Les indices son regroupés par niveau de difficulté.</p>
+
+<h3>1. Niveau : je suis chaud du code, j'ai envie de me creuser la tête</h3>
+
+<p>Le programme doit avoir 4 classes : </p>
+
+<ul>
+	<li>Board : c'est le plateau. Il doit y avoir une instance de cette classe lors d'une partie. </li>
+	<li>BoardCase : c'est une case. Il devrait y avoir 9 instances de cette classe dans ta partie</li>
+	<li>Player : ce sont les joueurs. Il doit y avoir 2 instances de cette classe lors d'une partie</li>
+	<li>Game : c'est la partie. Elle initialise tout et lance le jeu</li>
+</ul>
+
+<p>Du coup, je t'invite à dessiner tes classes, que doivent-elles faire, que doivent-elles lancer à leur initialisation ? Chacune des classes doit répondre à un but précis. Nous te conseillons de prendre un peu de temps à dessiner le but de tes classes avant de te lancer à tête baissée dans le code.</p>
+
+<h3>2. Niveau : j'ai envie de réfléchir, mais pas trop non plus</h3>
+<p>Commence par définir tes classes. Chaque classe doit avoir des rôles bien précis : </p>
+<ul>
+	<li>Board : à l'initialisation, le plateau doit instancier 9 BoardCases. Le plateau doit s'occuper de faire le lien entre les BoardCases  et le Game : il change les valeurs des BoardCases (de <em>empty</em> à <em>X</em> ou <em>O</em>), vérifie en fonction de la combinaison des BoardCases si un joueur enchaine trois symboles d'affichés.</li>
+	<li>BoardCase : un BoardCase renseigne de l'état d'une case : soit elle est vide (personne n'a joué dessus), soit elle a comme valeur X, soit elle a comme valeur O</li>
+	<li>Player : un joueur a un nom (<a href="https://www.youtube.com/watch?v=18SNR9c09is">habile</a>), et un état (victoire s'il a gagné)</li>
+	<li>Game : cette classe s'occupe de gérer toute la partie. À l'initialisation elle créé 2 instance de Player, et 1 instance de Board (l'instance de Board, initialise 9 instances de BoardCases). Game s'occupe de finir la partie si un joueur a gagné, de demander aux utilisateurs où ils veulent jouer à chaque tour</li>
+</ul>
+
+<p>Comment afficher ?
+Pour afficher le plateau, c'est plus simple que cela en a l'air. Il faut afficher une méthode <code>to_s</code> (to_string, une méthode qui marche pour les classes array, integer, etc) qui renvoie le plateau (ou les cases) au format string.</p>
+
+<h3>3. Niveau : 🎶 je suis perduuuu 🎵</h3>
+<p>On a pensé à toi, <a href="https://gist.github.com/felhix/ed862c5f504ff4c8e934da679f812224">voici un début de programme</a>. Le programme a des classes (toutes dans le même fichier dsl), et quelques méthodes pour t'aiguiller. Tu devras remplir les méthodes, voire en ajouter d'autres pour ne pas les rendre trop complexes.</p>
+    </div>
+    <br><br><br><br><br><br>
+
+<footer class="footer">
+  <div class="container">
+    <span class="text-muted">© <a href="http://www.thehackingproject.org/mentions">The Hacking Project, 2017</a></span>
+  </div>
+</footer>
+
+  
+
+</body></html>

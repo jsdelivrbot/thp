@@ -1,0 +1,216 @@
+<!-- Header -->
+<header>
+    <div id="main-page">
+        <div class="container">
+                <!-- Primary nav -->
+                <div class="main-logo"><a  href="https://checkr.com/">Checkr</a></div>
+
+                <!-- Primary nav -->
+                <nav class="primary-nav">
+                    <!-- Drobdown menu products -->
+                    <div class="dropdown1">
+                        <button class="dropbtn1"><span>Products</span><i class="material-icons">keyboard_arrow_down</i></button>
+                        <div class="dropdown-content1">
+                            <a href="#">Overview</a>
+                            <a href="#">Screening</a>
+                            <a href="#">Compliance</a>
+                            <a href="#">Security</a>
+                        </div>
+                    </div>
+                    <!-- Drop down menuInudstries -->
+                    <div class="dropdown2">
+                        <button class="dropbtn2"><span>Industries</span><i class="material-icons">keyboard_arrow_down</i></button>
+                        <div class="dropdown-content2">
+                            <a href="#">Overview</a>
+                            <a href="#">Financial services</a>
+                            <a href="#">Healthcare</a>
+                            <a href="#">Staffing</a>
+                            <a href="#">...</a>
+                        </div>
+                    </div>
+                    <!-- Drop down menu resources -->
+                    <div class="dropdown3">
+                        <button class="dropbtn3"><span>Resources</span><i class="material-icons">keyboard_arrow_down</i></button>
+                        <div class="dropdown-content3">
+                            <a href="#">Overview</a>
+                            <a href="#">Guide & Whitepaper</a>
+                            <a href="#">FAQ</a>
+                        </div>
+                    </div>
+                </nav>
+                <!-- side nav -->
+                <div> 
+                    <!-- Top nav -->
+                    <nav class="top-nav">
+                        <ul class="top-menu">
+                            <li>
+                                <a href="#">I am an applicant</a>
+                            </li>
+                            <li>
+                                <a href="#">API & Docs</a>
+                            </li>
+                            <li>
+                                <a href="#">About us</a>
+                            </li>
+                            <li>
+                                <a href="#">Careers</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Side nav -->
+                    <nav class="side-nav">
+                        <ul class="right-menu">
+                            <li>
+                                <a href="#">LOG IN</a>
+                            </li>
+                            <li>
+                                <a href="#" class="get-started">GET STARTED</a>
+                            </li>
+                    </nav>
+                </div>
+        </div>
+        </br></br></br></br></br></br>
+        <div class="second-part-main-page">
+            <div class="second-part-main-page-part1">
+                <h1>HIRE GREAT PEOPLE.</h1>
+                <h1>FASTER.</h1>
+                <p>Checkr provides modern and compliant background checks for global enterprises and startups.</p>
+                </br>
+                <button>EXPLORE NOW</button>
+
+            </div>
+            <div class="second-part-main-page-part2">
+                <video autoplay loop preload="auto"> <source src="https://15743-presscdn-0-7-pagely.netdna-ssl.com/wp-content/themes/checkr/assets/video/Checkr_Hero.mp4" type="video/mp4"   type="video/mp4"></video>
+            </div>
+            
+        </div> 
+    </div>
+</header>
+
+<!-- Partners -->
+    </br></br>
+    <section class="partners">
+        <div>
+            <h1>More Than 10,000 Businesses Trust Checkr for Their Background Screenings </h1>
+        </div>
+        <div> <%= image_tag('firm1.png', :width => "100%") %> </div>
+        <div><%= image_tag('firm2.gif', :width => "100%") %></div>
+        <div><%= image_tag('firm3.jpeg', :width => "100%") %></div>
+        <div><%= image_tag('firm6.jpg', :width => "100%") %></div>
+        <div><%= image_tag('firm5.gif', :width => "100%") %></div>
+    </section>
+    </br></br>
+
+<!-- Explain offer -->
+<section class="details-offer">
+    </br></br>
+
+    <div class="container2">
+        <h1>The Next Generation of Background Checks</h1>
+        <div class="container2-details-offer">
+            
+            <div class="content">
+                <p><img src="https://15743-presscdn-0-7-pagely.netdna-ssl.com/wp-content/uploads/2015/10/home-mobile.svg"></p>
+                <h3><strong>Mobile-Friendly</strong></h3>
+                <p>Create a positive applicant experience with simple, mobile-friendly onboarding.</p>
+            </div>
+
+            <div class="content">
+                <p><img src="https://15743-presscdn-0-7-pagely.netdna-ssl.com/wp-content/uploads/2015/10/home-computer_easy.svg"></p>
+                <h3><strong>Mobile-Friendly</strong></h3>
+                <p>Create a positive applicant experience with simple, mobile-friendly onboarding.</p>
+            </div>
+
+            <div class="content">
+                <p><img src="https://15743-presscdn-0-7-pagely.netdna-ssl.com/wp-content/uploads/2015/10/home-automation.svg"></p>
+                <h3><strong>Mobile-Friendly</strong></h3>
+                <p>Create a positive applicant experience with simple, mobile-friendly onboarding.</p>
+            </div>
+
+            <div class="content">
+                <p><img src="https://15743-presscdn-0-7-pagely.netdna-ssl.com/wp-content/uploads/2015/10/home-communications.svg"></p>
+                <h3><strong>Mobile-Friendly</strong></h3>
+                <p>Create a positive applicant experience with simple, mobile-friendly onboarding.</p>
+            </div>
+
+            <div class="content">
+                <p><img src="https://15743-presscdn-0-7-pagely.netdna-ssl.com/wp-content/uploads/2015/10/home-analytics.svg"></p>
+                <h3><strong>Mobile-Friendly</strong></h3>
+                <p>Create a positive applicant experience with simple, mobile-friendly onboarding.</p>
+            </div>
+        </div>
+    </div>
+    </br></br>
+</section>
+
+<!-- Typology business -->
+<section class="details-business">
+    </br></br>
+    <div class="container3">
+        <h1>Tailored to Fit Your Industry’s Needs</h1></br>
+        <div class="container3-details-business">
+            
+        <% (1..10).each do |i| %>
+
+            <a href="https://checkr.com/industries/financial-services/" class="image-biz">
+                <div class="img-blur-effect" style="background-image: url(https://checkr.com/wp-content/uploads/2015/10/checkr_home_financial2x.jpg);"></div>
+                <div class="content-biz">
+                    <span class="title-business-details"> Financial Services <i class="material-icons">keyboard_arrow_right</i></span>
+                </div>
+                <div class="content-biz-hover hover">
+                    <span class="title-business-details-hover">Screening solutions that help protect critically sensitive data.</span>
+                </div>
+            </a>
+            <% end %>
+
+        </div>
+    </div>
+    </br></br>
+</section>
+
+
+<!-- Typology business -->
+<section class="details-compliance">
+    </br></br>
+    <div class="container5">
+
+        <h1>Best in Class Compliance and Security</h1>
+        <div class="container5-details-compliance">
+
+            <div class="content-s">
+                <h3><i class="material-icons">search</i> <span>Screenings</span></h3>
+                <ul>
+                    <li>Criminal Records</li>
+                    <li>Driving Records</li>
+                    <li>Employment Verifications</li>
+                    <li>International Verifications</li>
+                    <li>Drug screening</li>
+                </ul>
+                <div><a href="#">REVIEW ALL OF CHECKR’S SCREENING SERVICES</a><i class="material-icons">arrow_forward</i></div>
+            </div>
+            <div class="content-s">
+                <h3><i class="material-icons">people</i> <span>Compliance</span></h3>
+                <ul>
+                    <li>Compliant with state and federal laws, including FCRA</li>
+                    <li>NAPBS accreditation</li>
+                    <li>Experienced in-house compliance and investigation team</li>
+                </ul>
+                <div><a href="#">REVIEW ALL OF CHECKR’S SCREENING SERVICES</a><i class="material-icons">arrow_forward</i></div>
+            </div>
+            <div class="content-s">
+                <h3><i class="material-icons">lock</i> <span>Security</span></h3>
+                <ul>
+                    <li>Data encrypted using bank-grade standards</li>
+                    <li>Non-stop monitoring</li>
+                    <li>Infrastructure built for high availability</li>
+                </ul>
+                <div><a href="#">REVIEW ALL OF CHECKR’S SCREENING SERVICES</a><i class="material-icons">arrow_forward</i></div>
+            </div>
+
+        </div>
+
+    </div>
+    </br></br>
+</section>
+
+

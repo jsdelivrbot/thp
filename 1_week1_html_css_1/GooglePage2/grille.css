@@ -1,0 +1,117 @@
+body
+{
+	font-size: 0.8em;
+	font-family: sans-serif;
+}
+
+/*  La barre de navigation du header commence à droite et ne fait que 25% de la page */
+header
+{
+	display:flex;
+}
+
+header ul{
+	text-align: right;
+}
+
+
+
+
+
+/*  LA BARRE DE NAVIGATION HAUTE ET BASSE */
+
+/*  Les listes servant pour les nav bar haut centre et bas 
+sont ordonnées en ligne */
+
+/* PARTIE HAUTE*/
+
+.airhead
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position:fixed; top:2%; right:3%; width: 100%;
+	background-color: #FFF;
+	justify-content: right;
+}
+
+li
+{
+	display:inline-block;
+	margin:0.8em;
+}
+
+/*  Un lien classique est en gris non souligné */
+.l_a
+{
+	color: rgb(110, 110, 110);
+	text-decoration: none;
+}
+
+/*  Un passage de la souris sur les liens classique type visuel hyperlink met la police en noir */
+.l_a:hover
+{
+	color: rgb(0,0,0);
+	text-decoration: underline;
+}
+
+/*  l'image (les 9 carrés) est grise de base*/
+.l_b
+{
+opacity: 0.5;
+}
+
+/*  l'image devient noire à la selection (les 9 carrés)*/
+.l_b:hover
+{
+opacity: 1;
+}
+
+/*  Les liens type block à cliquer ont une couleur de fond bleue
+et une police blance */
+.l_c
+{
+background-color: rgb(65,122,245);
+padding-right: 1em;
+padding-left: 1em;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+}
+
+.l_c_c
+{
+color:rgb(255,255,255);
+text-decoration: none;
+}
+
+/*  Un passage de la souris sur les liens type "case à appuyer" 
+change la couleur de fond en noir */
+.l_c:hover
+{
+background-color: black;
+}
+
+/* PARTIE BASSE*/
+
+
+.airhead2
+{
+	display:flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position:fixed; bottom:0; width: 100%; height: 5%;
+	background-color: rgb(240,240,240);
+	justify-content: center;
+}
+
+.l_a_2
+{ 
+ margin-left: 1.5em;
+ margin-right: 1.5em;
+ }
+
+.l_a_2:nth-child(4)
+{
+	flex:1;
+}

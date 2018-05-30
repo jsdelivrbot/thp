@@ -1,0 +1,74 @@
+#body-calculator {
+    background-color: #0094b9;
+    text-align: center;
+    padding: 1em 2em;
+    border-radius: 3%;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    height: 25em;
+    width: 20em;
+}
+
+
+/* Style the different types of buttons */
+    .button-type-1,.button-type-2,.button-type-3 {
+        border-radius: 10%;
+        height: 3em;
+        color: white;
+        font-weight: bold;
+        vertical-align: middle;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+    }
+
+    .col-xs-3,.col-xs-6,.col-xs-12 {
+        padding: 0.15em 0.15em;
+        display: flex;               /* establish flex container */
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* For the screen*/
+    .button-type-0 {
+        background-color: #5e7f60;
+        border-radius: 0%;
+        height: 2em;
+        color: white;
+        font-weight: bold;
+        align-items: center;
+        border: 1px solid black;
+        font-size: 2em;
+    }
+    /* For the number*/
+    .button-type-2 {
+       background-color: #a5a29d;
+    }
+    /* For the mathematical operations*/
+    .button-type-1 {
+       background-color: #322c29;
+    }
+    /* For  the equals*/
+    .button-type-3 {
+        background-color: orange; 
+    }
+
+    #screen {
+    text-align: right;
+    font-size: 2em;
+    font-weight: 200;
+    }
+
+
+/* Style the different types of buttons on hover*/
+    .button-type-2:hover {
+       background-color: #898782;
+    }
+    /* For the mathematical operations*/
+    .button-type-1:hover {
+       background-color: #4f4642;
+    }
+    /* For  the equals*/
+    .button-type-3:hover {
+        background-color: #f2bc35; 
+    }

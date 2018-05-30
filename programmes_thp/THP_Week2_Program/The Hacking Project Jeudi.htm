@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://thehackingproject.herokuapp.com/cursus/semaine-2/jour-4 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>The Hacking Project</title>
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="QfHGlfGbzLUan5huLBAY6dfw14hqecRb5vKPgzR1cogyEj56gOSFlhjtpvBa9im4V1ZzcUifoJzzyXR8o3ffGw==">
+    <link rel="stylesheet" media="all" href="./The Hacking Project Jeudi_files/application-ba8fc79d1e4588a4c69e3f966347dc2eb61d17b52132876debcdbcac2c3cd82a.css" data-turbolinks-track="reload">
+    <script src="./The Hacking Project Jeudi_files/application-abf83992d090a5fed5bf6ac842659c74ebb351307a43f1f2a319751e18653507.js" data-turbolinks-track="reload"></script>
+  <script src="./The Hacking Project Jeudi_files/jquery.validate.min.js"></script>
+	<script src="./The Hacking Project Jeudi_files/additional-methods.min.js"></script>
+  <link rel="stylesheet" href="./The Hacking Project Jeudi_files/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="./The Hacking Project Jeudi_files/tether.min.js"></script>
+  <script src="./The Hacking Project Jeudi_files/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  </head>
+
+  <body cz-shortcut-listen="true">
+    <br><br><br>
+    <div class="container">
+      <h1>Jeudi 12 octobre : Scrapper un site</h1>
+<h2>1. Ressources</h2>
+<h3>a. Nokogiri</h3>
+<p>Nokogiri est une Gem de ruby qui permet de parser un document html. En gros cela permet de récupérer des données à partir d'un site internet. Tu vas découvrir le monde merveilleurs du parsing et du scrapping aujourd'hui.</p>
+
+<h5>À faire</h5>
+<ul>
+	<li>Tout d'abord, tu peux jeter un oeil à <a href="https://github.com/sparklemotion/nokogiri">la fameuse Gem Nokogiri</a></li>
+	<li>Ensuite, pour mettre un pied à l'étrier, nous t'invitons à réaliser ton premier parseur avec <a href="http://ruby.bastardsbook.com/chapters/html-parsing/">ce tutoriel pas à pas</a>.</li>
+	<li>Après, tu vas découvrir comment utiliser le XPath, une techno puissante compatible avec Nokogiri en suivant la partie <em>Data Extraction</em> de <a href="https://blog.engineyard.com/2010/getting-started-with-nokogiri">ce tutoriel</a>. Aussi, nous t'invitons à regarder <a href="https://www.youtube.com/watch?v=jSiYpmvA50A">cette vidéo Youtube</a> qui indique comment récupérer le XPath à partir de l'inspecteur d'éléments de Chrome.</li>
+</ul>
+
+<h2>Projet</h2>
+<p>⚠️ <b>ATTENTION</b> ⚠️ Le projet du jour est validant ⚠️ <b>ATTENTION</b> ⚠️<br>
+Il est <b>indispensable</b> que tu le soumettes avant 23h59 aujourd'hui. Plus d'information sur les projets validant dans <a href="https://thehackingproject.herokuapp.com/modalites">la page des modalités</a>. Voici le lien <a href="https://thehackingproject.herokuapp.com/users/validating-forms/form-4">du formulaire</a> à compléter.
+</p>
+
+
+<p>Maintenant que tu commences à comprendre comment parser une page web, tu vas scrapper tes premières données. Wouhou</p>
+
+
+<h3>a. Route de la mairie</h3>
+<p>Le CEO de get-email-corp a besoin encore de tes services. Il voudrait toutes les adresses email des mairies du Val d'Oise. Quelle coincidence, tu viens d'apprendre à le faire. Va sur <a href="http://annuaire-des-mairies.com/">cet annuaire des mairies</a> et va récupérer les adresses emails des mairies du Val d'Oise.</p>
+<ul>
+	<li>Tout d'abord, écris une méthode <code>get_the_email_of_a_townhal_from_its_webpage</code> qui, comme son nom l'indique, récupère l'adresse email à partir de l'url d'une mairie, par exemple celle de <a href="http://annuaire-des-mairies.com/95/vaureal.html">Vauréal</a></li>
+	<li>Ensuite, écris une méthode <code>get_all_the_urls_of_val_doise_townhalls</code> qui, comme son nom l'indique, récupère toutes les url de villes du Val d'Oise. C'est recommandé de le faire de <a href="http://annuaire-des-mairies.com/val-d-oise.html">cette page web</a></li>
+	<li>Tu n'as plus qu'à recoller les méthodes ensemble et à toi la gloire</li>
+	<li>BONUS : c'est quand même recommandé d'enregistrer les urls dans un hash propre du genre <code>{ :name =&gt; "nomDeLaVille", :email=&gt; "ville@machin.chose" }</code> pour que le CEO de get-email-corp ne soit pas trop perdu</li>
+</ul>
+
+<h3>b. Trader de l'obscur</h3>
+<p>Lehman Brothers, impressionné par tes algorithmes de trading de la dernière fois, veut faire encore appel à toi. Leur Chief Digital Officer, très hype, a entendu parler au JT de TF1 d'un "<em>truc révolutionnaire qui s'appelle je crois le bloque chienne</em>" et voudrait du coup cnnaître le cours des cryptomonnaies.</p>
+
+<p>Va sur <a href="https://coinmarketcap.com/all/views/all/">CoinMarketCap</a> et fait un programme qui va récupérer le cours de toutes les cryptomonnaies, et les enregistrer bien proprement dans une array de hashs. </p>
+
+<p>BONUS : fais en sorte que ton programme tourne en boucle, et prenne lex taux toutes les heures</p>
+
+<h3>c. Route de la philosophie</h3>
+<p><a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Se_rendre_%C3%A0_l%27article_philosophie">Des lecteurs de Wikipédia ont remarqué qu'en cliquant sur le premier wikilien du résumé introductif d'un article, et en répétant cette action sur chacun des articles visités ainsi, le parcours aboutit à l'article philosophie</a></p>
+<p>Créé un programme qui prend <a href="https://fr.wikipedia.org/wiki/Sp%C3%A9cial:Page_au_hasard">une page wikipedia au hasard</a>, qui va cliquer sur le premier lien du résumé introductif d'un article, et qui va répéter cela jusqu'à tomber sur l'article Philosophie. Voici les règles qui concernent la chaîne : </p>
+
+<ul>
+	<li>cela doit être le premier lien ni en parenthèse, ni italisé</li>
+	<li>il faut ignorer 
+	<ul>
+		<li>les liens externes</li>
+		<li>les liens vers la page actuelle</li>
+		<li>les liens rouges (non existant)</li></ul></li>
+	<li>stopper quand on arrive à Philosophie, vers une page sans lien, ou quand on est dans une boucle</li>
+</ul>
+
+<p>Ton programme doit mentionner quand il a fini, et te dire des infos cools comme par exemple la page de départ ou le nombre d'articles visités.</p>
+    </div>
+    <br><br><br><br><br><br>
+
+<footer class="footer">
+  <div class="container">
+    <span class="text-muted">© <a href="http://www.thehackingproject.org/mentions">The Hacking Project, 2017</a></span>
+  </div>
+</footer>
+
+  
+
+</body></html>

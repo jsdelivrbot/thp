@@ -1,0 +1,264 @@
+body
+{
+	font-size: 0.8em;
+	font-family: sans-serif;
+}
+
+/*  La barre de navigation du header commence à droite et ne fait que 25% de la page */
+header
+{
+	display:flex;
+}
+
+header ul{
+	text-align: right;
+}
+
+
+
+
+/* LES GRILLES */
+
+
+#espacegrille {
+	width: 40em;
+	height: 40em;
+	background-color: ;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 6%;
+}
+
+/*Définir la taille du tableau */
+
+.tableau
+{
+	width: 40em;
+	height: 40em;
+}
+
+/* La bordure des cellules des lignes de la grille sont en noir */
+.black_border
+{
+background-color: rgb(235,235,235);
+}
+
+
+
+/*  LE MILIEU DE PAGE V2*/
+#work2
+{
+	text-align:center;
+	margin-top: 25%;
+}
+
+.BCstyle
+{
+list-style-type: none;
+margin: 0;
+padding: 0;
+text-align:center;
+background-color: #FFF;
+background-color: rgb(247,247,247);
+padding-right: 2em;
+padding-left: 2em;
+padding-top: 1em;
+padding-bottom: 1em;
+color:rgb(130,130,130);
+text-decoration: none;
+}
+
+/*  LE MILIEU DE PAGE V1*/
+/*  centrer l'image google */
+.google
+{
+	text-align:center;
+	margin-top: 14%;
+}
+
+/*  centrer le bouton principal */
+
+
+/*  centrer la barre de recherche */
+.barre
+{
+	text-align:center;
+	justify-content: center;
+}
+
+/*  définir la taille de la barre de recherche*/
+#text
+{
+	text-align:center;
+	width: 50em;
+	height: 3em;
+	box-shadow: 0px 2px 4px 2px rgb(220,220,220);
+	border:none;
+}
+
+/*  définir l'apparence de la barre de recherche lorsque active*/
+#text:hover
+{
+box-shadow: 0px 2px 4px 2px rgb(200,200,200);
+}
+
+#text:focus
+{
+box-shadow: 0px 2px 4px 2px rgb(200,200,200);
+border:none;
+outline:none;
+}
+
+/*  définir l'apparence des deux boutons sous la barre de recherche*/
+
+.boutons
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align:center;
+	background-color: #FFF;
+}
+
+.l_d
+{
+background-color: rgb(247,247,247);
+padding-right: 2em;
+padding-left: 2em;
+padding-top: 1em;
+padding-bottom: 1em;
+}
+
+.l_d_d
+{
+color:rgb(130,130,130);
+text-decoration: none;
+}
+
+/*  Un passage de la souris sur les liens type "case à appuyer" 
+change la couleur de fond en plus clair */
+.l_d:hover
+{
+border: 1px solid rgb(190,190,190);
+background-color: rgb(250,250,250);
+box-shadow: 0px 2px 4px 2px rgb(220,220,220);
+}
+
+.l_d_d:hover
+{
+color:rgb(70,70,70);
+text-decoration: none;
+}
+
+.l_d:focus
+{
+border-color: blue;
+}
+
+.l_d_d:focus
+{
+color:rgb(80,80,80);
+text-decoration: none;
+}
+
+
+
+
+
+/*  LA BARRE DE NAVIGATION HAUTE ET BASSE */
+
+/*  Les listes servant pour les nav bar haut centre et bas 
+sont ordonnées en ligne */
+
+/* PARTIE HAUTE*/
+
+.airhead
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position:fixed; top:2%; right:3%; width: 100%;
+	background-color: #FFF;
+	justify-content: right;
+}
+
+li
+{
+	display:inline-block;
+	margin:0.8em;
+}
+
+/*  Un lien classique est en gris non souligné */
+.l_a
+{
+	color: rgb(110, 110, 110);
+	text-decoration: none;
+}
+
+/*  Un passage de la souris sur les liens classique type visuel hyperlink met la police en noir */
+.l_a:hover
+{
+	color: rgb(0,0,0);
+	text-decoration: underline;
+}
+
+/*  l'image (les 9 carrés) est grise de base*/
+.l_b
+{
+opacity: 0.5;
+}
+
+/*  l'image devient noire à la selection (les 9 carrés)*/
+.l_b:hover
+{
+opacity: 1;
+}
+
+/*  Les liens type block à cliquer ont une couleur de fond bleue
+et une police blance */
+.l_c
+{
+background-color: rgb(65,122,245);
+padding-right: 1em;
+padding-left: 1em;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+}
+
+.l_c_c
+{
+color:rgb(255,255,255);
+text-decoration: none;
+}
+
+/*  Un passage de la souris sur les liens type "case à appuyer" 
+change la couleur de fond en noir */
+.l_c:hover
+{
+background-color: black;
+}
+
+/* PARTIE BASSE*/
+
+
+.airhead2
+{
+	display:flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position:fixed; bottom:0; width: 100%; height: 5%;
+	background-color: rgb(240,240,240);
+	justify-content: center;
+}
+
+.l_a_2
+{ 
+ margin-left: 1.5em;
+ margin-right: 1.5em;
+ }
+
+.l_a_2:nth-child(4)
+{
+	flex:1;
+}

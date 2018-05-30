@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://thehackingproject.herokuapp.com/cursus/semaine-2/jour-5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.turbolinks-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 9999;
+  transition: width 300ms ease-out, opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}</style>
+    
+    
+
+    <link rel="stylesheet" media="all" href="./The Hacking Project Vendredi_files/application-ba8fc79d1e4588a4c69e3f966347dc2eb61d17b52132876debcdbcac2c3cd82a.css" data-turbolinks-track="reload">
+    <script src="./The Hacking Project Vendredi_files/application-abf83992d090a5fed5bf6ac842659c74ebb351307a43f1f2a319751e18653507.js" data-turbolinks-track="reload"></script>
+  <script src="./The Hacking Project Vendredi_files/jquery.validate.min.js"></script>
+	<script src="./The Hacking Project Vendredi_files/additional-methods.min.js"></script>
+  <link rel="stylesheet" href="./The Hacking Project Vendredi_files/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="./The Hacking Project Vendredi_files/tether.min.js"></script>
+  <script src="./The Hacking Project Vendredi_files/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <title>The Hacking Project</title><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="ZcN5yFoW2dLBCaKtBrSlrfMC+7fdDKEH5Qc+5qLgDTAWIIEnK2mQ8cN7nDNwUpT8c6RfTv/qxcDwPMUZNeKgow=="></head>
+
+  <body>
+    <br><br><br>
+    <div class="container">
+      <h1>Mercredi 11 octobre : Bot Twitter</h1>
+<h2>1. Ressources</h2>
+<h3>Watir</h3>
+<p>Aujourd'hui, le dernier projet de ruby va te montrer un outil extrêmement puissant pour récupérer des datas dans le deep web : Watir.<br>
+Watir est créé à la base pour faire du test sur des sites web (<a href="https://www.youtube.com/watch?v=NGu1YlXHVFM">lol oups</a>), mais cette gem peut être utilisée pour simuler un utilisateur sur un site web.</p>
+
+
+<h5>À faire</h5>
+<ul>
+	<li>J'ai fait un petit article tutoriel sur Watir que tu peux trouver <a href="http://intro-scrap-watir.surge.sh/">ici</a></li>
+	<li><a href="http://watir.com/docs/home">La doc</a> renseigne plein de fonctions cools que tu peux utiliser</li>
+</ul>
+
+<h2>Projet</h2>
+<p>C'est vendredi, donc c'est ateliers, yay ! Voici la liste des ateliers :</p>
+
+<h5>Atelier pimp de terminal, par Félix</h5>
+<p>14h en livestream</p>
+<p>On est d'accord, les screenshots de terminal tout vilain avec une seule couleur où on comprend rien c'est pas ouf. Maintenant que tu sais comment ça marche un terminal, et si tu apprenais à le rendre plus joli ? </p>
+
+
+<b>a. Ceux sur Linux</b>
+<ul>
+	<li>Tout d'abord, télécharge <a href="http://www.generation-linux.fr/index.php?post/2008/12/09/Le-terminal-le-plus-pratique-au-monde-:-Terminator">Terminator</a>, un terminal bien plus sex que le terminal de base</li>
+	<li>Tu peux régler le Terminator en faisant clic droit -&gt; preferences -&gt; profile. Tu peux par exemple changer le shape du cursor en i-beam, qui est plus sympa, ou plus intéressant, dans l'onglet background rendre le terminal un petit peu transparent, ce qui est très coolos. Enfin,il te faut <b>impérativement</b> cliquer sur <code>Run command as login shell</code>, comme marqué sur <a href="https://i.stack.imgur.com/8J6OT.png">cette photo</a>, si tu veux que le terminal marche avec RVM.
+	<ul>
+		<li>Aussi, <a href="https://draculatheme.com/">Dracula</a> est vraiment mon thème préféré. Et il est possible de l'installer sur Terminator, en faisant un peu de bidouillage. Tu vas devoir aller dans <a href="https://doc.ubuntu-fr.org/terminator#configuration">le fichier config de Terminator</a> et y coller <a href="https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/terminator/Dracula.config">ce profil</a>. Tu devras après régler le profil pour que ce soit le profil permanent. </li>
+	</ul></li>
+	<li>Tappe dans ton terminal <code>/opt/sublime_text/sublime_text hello.txt</code>. Si tu as Sublime Text d'installé, cela devrait ouvrir Sublime Text dans un onglet intitulé "hello.txt". Cool, non ? Mais cette commande n'est pas pratique à retenir. Tu vas donc apprendre à faire des alias, un moyen de dire à ton terminal "quand je tappe <em>truc</em>, ça va faire <em>cd machin/bidule/chouette</em>". C'est bien expliqué dans la <a href="https://doc.ubuntu-fr.org/alias">doc Ubuntu</a>, mais voici comment faire :
+	<ul>
+		<li>Tout d'abord,  rentre <code>gedit ~/.bashrc</code>. Cela devrait ouvrir un fichier qui s'appelle .bashrc, qui contient tous les paramètres de configuration de ton Terminal. Normalement, il devrait y avoir les lignes suivantes :<br>
+<pre>if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi</pre></li>
+		<li>Si elles n'y sont pas, mets-les</li>
+		<li>Sauvegarde quit, ensuite rentre <code>gedit ~/.bash_aliases</code>, ce qui devrait créér un fichier. Dans ce fichier, tu peux rentrer les alias que tu veux, sous le format suivant : <code>alias nom_de_votre_alias='commande de votre alias'</code>. Tu peux faire ce que tu veux, voici quelques-uns de mes alias en guise d'exemple : <br>
+<pre>alias stt='/opt/sublime_text/sublime_text'
+alias ga='git add .'
+alias gc='git commit -m'</pre></li>
+		<li>Sauvegarde, quit, qui le terminal, relance-le, à toi la gloire</li></ul>
+</li>
+	<li>Maintenant, le truc intéressant, comment changer le PS1. Le PS1 est la petite ligne avant ce que l'on tappe dans le terminal. De base c'est un truc tout vilain, mais elle peut rapidement être pimpée.
+	<ul>
+		<li>Pour ceci, il faut modifier le PS1 dans le fichier .bashrc auquel tu as accédé tout à l'heure. <a href="http://www.generation-linux.fr/index.php?post/2009/02/02/Bash-%3A-personnalisation-de-l-invite">Cet article</a> explique les bases du PS1</li>
+		<li><p>Fais le PS1 de tes rêves avec <a href="http://bashrcgenerator.com/">ce site</a>, tu peux utiliser des couleurs. Si tu es en panne d'inspiration, voici mon PS1 : <br>
+</p><pre>export PS1="\n\[$(tput sgr0)\]\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;39m\]😊 \[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;10m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\n\[$(tput sgr0)\]\[\033[38;5;214m\]\D{%T}\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;254m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+</pre></li>
+		<li>Il ne te reste plus qu'à l'insérer, et relancer le terminal</li></ul></li>
+</ul>
+
+<b>2. Ceux sur macOS</b>
+<ul>
+	<li>Tout d'abord, télécharge <a href="https://www.iterm2.com/">iTerm2</a>, et colle-lui un theme sympa. Dracula est un <a href="https://draculatheme.com/iterm/">super theme</a> par exemple. Tu peux régler dans les préférences d'autres paramètres sympa si tu veux</li>
+	<li>Tappe dans ton terminal <code>/Applications/Sublime\ Text\ 3.app/Contents/SharedSupport/bin/subl hello.txt</code>. Si tu as Sublime Text 3 d'installé, cela devrait ouvrir Sublime Text dans un onglet intitulé "hello.txt". Cool, non ? Mais cette commande n'est pas pratique à retenir. Tu vas donc apprendre à faire des alias, un moyen de dire à ton terminal "quand je tappe <em>truc</em>, ça va faire <em>cd machin/bidule/chouette</em>".  Voici comment faire :
+	<ul>
+		<li>Tout d'abord, tappe <code>open ~/.bash_profile</code>. Cela devrait ouvrir avec TextEdit un fichier qui s'appelle .bash_profile, qui contient tous les paramètres de configuration de ton Terminal. </li>
+		<li>Dans ce fichier, tu peux rentrer les alias que tu veux, sous le format suivant : <code>alias nom_de_votre_alias='commande de votre alias'</code>. Tu peux faire ce que tu veux pour aller plus vite, mais voici quelques-uns de mes alias en guise d'exemple : <br>
+<pre>alias stt='/Applications/Sublime\ Text\ 3.app/Contents/SharedSupport/bin/subl'
+alias ga='git add .'
+alias gc='git commit -m'
+alias ll='ls -als'</pre></li>
+		<li>Sauvegarde, quit, qui le terminal, relance-le, à toi la gloire</li></ul></li>
+	<li>Maintenant, un autre truc intéressant : comment changer le PS1. Le PS1 est la petite ligne avant ce que l'on tappe dans le terminal. De base sur macOS c'est un truc tout vilain d'une tristesse sans nom, sans couleur, et moche ; mais elle peut rapidement être pimpée.<p></p>
+	<ul>
+		<li>Pour ceci, il faut modifier le PS1 dans le fichier .bash_profile auquel tu as accédé tout à l'heure. <a href="http://osxdaily.com/2006/12/11/how-to-customize-your-terminal-prompt/">Cet article</a> explique les bases du PS1</li>
+		<li>Fais le PS1 de tes rêves avec <a href="http://bashrcgenerator.com/">ce site</a>, tu peux utiliser des couleurs. Si tu es en panne d'inspiration, voici mon PS1 :<br>
+<pre>export PS1="\n[$(tput sgr0)][\033[38;5;9m]\u[$(tput sgr0)][\033[38;5;15m] [$(tput sgr0)][\033[38;5;39m]🙃 [$(tput sgr0)][\033[38;5;15m] [$(tput sgr0)][\033[38;5;10m]\w[$(tput sgr0)][\033[38;5;15m]\n[$(tput sgr0)][\033[38;5;214m]\T[$(tput sgr0)][\033[38;5;15m] [$(tput sgr0)][\033[38;5;254m]\$[$(tput sgr0)][\033[38;5;15m] [$(tput sgr0)]"</pre></li>
+		<li>Il ne te reste plus qu'à l'insérer, et relancer le terminal</li></ul></li></ul>
+
+
+<h5>Atelier Scrapping de Watir</h5>
+<p>Courant après-midi</p>
+
+<h5>Atelier corrections</h5>
+<p>Courant après-midi</p>
+
+<h5>Atelier f-projects</h5>
+<p>Courant après-midi</p>
+<h5></h5>
+    </div>
+    <br><br><br><br><br><br>
+
+<footer class="footer">
+  <div class="container">
+    <span class="text-muted">© <a href="http://www.thehackingproject.org/mentions">The Hacking Project, 2017</a></span>
+  </div>
+</footer>
+
+  
+
+</body></html>

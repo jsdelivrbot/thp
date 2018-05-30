@@ -1,0 +1,63 @@
+
+.board {
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+}
+div {
+	width: 200px;
+	height: 200px;
+	float: left;
+}
+#circle-red { 
+	background-color: #FF1605;
+	border-top-left-radius: 50%;
+}
+#circle-green { 
+	background-color: #46E812;
+	border-top-right-radius: 50%;
+}
+#circle-yellow { 
+	background-color: #FFC612;
+	border-bottom-left-radius: 50%;
+}
+#circle-blue { 
+	background-color: #2725FF;
+	border-bottom-right-radius: 50%;
+}
+#circle-red:hover { 
+	background-color: #FF1605;
+	border-top-left-radius: 50%;
+	opacity: 0.5;
+	cursor: pointer;
+}
+#circle-green:hover { 
+	background-color: #46E812;
+	border-top-right-radius: 50%;
+	opacity: 0.5;
+	cursor: pointer;
+}
+#circle-yellow:hover { 
+	background-color: #FFC612;
+	border-bottom-left-radius: 50%;
+	opacity: 0.5;
+	cursor: pointer;
+}
+#circle-blue:hover { 
+	background-color: #2725FF;
+	border-bottom-right-radius: 50%;
+	opacity: 0.5;
+	cursor: pointer;
+}
+.circle-ligth { 
+	opacity: 0.5;
+	border: 3px solid red;
+}
+
+.light-up {
+	opacity: 0.5;
+}
+	
+.clicked-on {
+	box-shadow: 1px 1px 10px black inset, 1px 1px 1px rgba( 255, 255, 255, 0.4);
+}

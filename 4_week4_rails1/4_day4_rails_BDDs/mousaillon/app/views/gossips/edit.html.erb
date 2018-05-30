@@ -1,0 +1,24 @@
+<h1>Edit the Gossip</h1>
+
+
+<div>
+    <%= form_for @gossip do |g| %>
+      <%= g.label :content %>
+      <%= g.text_field :content %> </br>
+
+      <%= g.submit %>
+    <% end %>
+</div>
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <%= link_to 'Destroy', @gossip, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+            <td>
+                <%= link_to "Return to gossip list", gossips_path %>
+            </td>
+        </tr>
+    </tbody>
+</table>

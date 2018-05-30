@@ -1,0 +1,41 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Basic style //
+
+nav {
+        color: white;
+        font-weight: bold;
+        a a{
+            color: black !important;
+        } 
+    button {
+        border: none !important;
+    }
+}
+
+.navbar-nav {
+  float: none;
+  text-align: center;
+}
+
+.navbar {
+    text-align: center;
+    vertical-align: middle;
+}
+.navbar-nav li {
+  float: none;
+  display: inline-block;
+}
+
+
+#subscribe {
+    height: 100%;
+    padding-top: 8px;
+}
+.center{
+  display:table-cell;
+  vertical-align:middle;
+}

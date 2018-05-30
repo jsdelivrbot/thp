@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title> Bienvenu sur la page 2 </title>
+  </head>
+    
+  <body>
+    <h1> Ma passion pour les animaux se décline en plusieurs catégories <strong> </strong> </h1>
+  <h2> <em>Les vaches </em> </h2>
+           <p> Les vaches sont nos amis mais elles ne sont pas très intelligentes pour les raisons suivantes
+             <ol>
+               <li> Herbe a longueur de journée, il suffit de voir <a   href="page2.html" > cette page </a> </li>
+                <li> Pas beaucoup d'exercice </li>
+               </ol>
+         <p/>
+       <h2> les poules </h2>
+       <h2> les grenouilles </h2>
+  </body>
+</html>

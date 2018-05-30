@@ -1,0 +1,12 @@
+
+
+<h2>Which movie are you looking for?</h2>
+<div class="form-inline form-group">
+    <div class="form-group">
+        <%= form_tag(home_search_url, method: :post) do %>
+            <%= label_tag :search %>
+                <%= text_field_tag :search, params[:search],class: 'form-control'  %>
+                    <%= submit_tag "Search!", class: 'btn btn-primary'%>
+                        <% end %>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+body
+
+{
+	background-color: #FFF;
+	background-image: url("neige.jpg");
+}
+
+p em
+{
+	font-weight: bold;
+	font-size: 4em;
+}
+
+h1
+{
+color: red;
+}
+
+.Introduction
+{
+	text-align: center;
+	font-size: 2em;
+}
+
+#intro
+{
+	text-align: center;
+}
+
+.flottant
+{
+	float: right;
+    box-shadow: 12px 12px 12px green;
+}
+
+
+	ul
+{
+	color: grey;
+	font-size: 1em;
+	font-family: Impact, "Arial Black"
+	text-align: justify;
+	border: 3px 3px 3px black;
+	box-shadow: 5px 5px 5px grey;
+
+}
+
+a:active
+{
+color:green;
+}
+
+h1:hover
+{
+border-left: 6px solid grey;
+   text-decoration: underline;
+   color: grey;
+}

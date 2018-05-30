@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Intuit Accounts - Sign Up</title>
+    <link href="main.scss" rel="stylesheet" type="text/scss">
+  </head>
+  <body>
+    <div class="sign-in-bar">
+      
+        <button class="sign-in-button"> 
+          <i class="material-icons md-18 md-light">lock</i><span class="button-text"><%= link_to "Sign In", new_session_path(resource_name), class: "sign-in-text" %></span ></button>
+          <p class="existing-sign-in">Already have an Intuit account?<br><%= link_to "I forgot my User ID or Password", new_password_path(resource_name) %><br></p>
+    </div>
+    
+    <div class="logo-holder-bar">
+      <%= image_tag("intuit.png", :alt => "intuit logo", class: "centered_logo") %>
+    </div> </br> </br></br></br>
+
+
+
+    <form action="#" method="post" class="sign-up-form">
+      <div class="mini-logos">
+        <ul class="mini-logo-list">
+          <li>
+            <a href="https://turbotax.intuit.com/" class="mini-logo-holder ttlogo" target="_blank"> <%= image_tag("turbotax.jpg", size: "10x10") %> Turbotax</a>
+          </li>
+          <li>
+            <a href="https://quickbooks.intuit.com/" class="mini-logo-holder qblogo" target="_blank"><%= image_tag("quickbooks.png", size: "10x10")%> Quickbooks</a>
+          </li>
+          <li>
+            <a href="https://www.mint.com/" class="mini-logo-holder mtlogo" target="_blank"><%= image_tag("mint.ico", size: "10x10")%> Mint</a>
+          </li>
+        </ul>
+      </div>
+      <h1>One Account.<br>Everything Intuit.</h1>
+      <p class="sub-header">Create an account for all of Intuit's products including Mint. <a href="https://accounts-help.lc.intuit.com/questions/1582580-creating-an-account" class="learn-more" target="_blank">Learn more</a></p>
+      <fieldset>
+        <label for="email">Email address</label>
+        <input type="email" name="email" id="email" class="input-field" required maxlength="100">
+      </fieldset>
+      <fieldset>
+        <label for="tel">Phone (recommended)</label>
+        <input type="tel" name="tel" id="tel" class="input-field">
+        <p class="disclaimer">Standard call, messaging or data rates may apply.</p>
+      </fieldset>
+      <fieldset>
+        <label for="pwd">Password</label>
+        <div class="input-container">
+          <input type="password" name="pwd" id="pwd" class="input-field" required>
+          <span class="lock-left-image"></span>
+        </div>
+      </fieldset>
+      <button type="submit" class="submit-button"></span>Create Account</button>
+      <p class="legal"><em class="light_grey">By clicking Create Account, you agree to our <a href="https://accounts.intuit.com/terms-of-service" target="_blank">License Agreement</a> and <a href="https://security.intuit.com/privacy" target="_blank">Privacy Statement</a></em></p>
+    </form>
+    <footer>
+    
+    </br> </br>
+    <div class="small-logo-holder-bar">
+      <%= image_tag("intuit.png", :alt => "intuit logo", class: "small-centered_logo") %>
+    </div> </br> </br>
+
+      <div class="footer-links-holder">
+        <ul class="footer-links">
+          <li>
+            <a href="http://about.intuit.com/legal/" class="footer-legal footer-link-text" target="_blank">Legal</a>
+          </li>
+          <li>
+            <a href="https://security.intuit.com/privacy/" class="footer-privacy footer-link-text" target="_blank">Privacy</a>
+          </li>
+          <li>
+            <a href="http://security.intuit.com/" class="footer-security footer-link-text" target="_blank">Security</a>
+          </li>
+        </ul>
+      </div>
+
+
+
+
+      <div class="footer-smallprint">
+        <small>© 2017 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB, TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.<br>Terms and conditions, features, support, pricing, and service options subject to change without notice.</small>
+      </div>
+    </footer>
+  </body>
+</html>

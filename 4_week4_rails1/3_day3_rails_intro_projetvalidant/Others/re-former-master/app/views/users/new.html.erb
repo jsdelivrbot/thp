@@ -1,0 +1,63 @@
+<h1>Créer un user</h1>
+<!--<form accept-charset = "UTF-8"> -->
+
+<div>
+<%= form_for @user do |form| %>
+
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+  <p>
+    <%= form.label :username %><br>
+    <%= form.text_field :username %>
+  </p>
+ 
+  <p>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+  </p>
+   <p>
+    <%= form.label :bio %><br>
+    <%= form.text_area :bio %>
+  </p>
+ 
+  <p>
+    <%= form.submit "Créer" %>
+  </p>
+
+<% end %>
+
+
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+</div>
+<!-- </form> -->
+
+<!-- <%= form_tag (users_path) do |form| %>
+  <p>
+    <%= label_tag "username" %><br>
+    <%= text_field_tag "username" %>
+  </p>
+ 
+  <p>
+    <%= label_tag "email" %><br>
+    <%= text_field_tag "email" %>
+  </p>
+
+   <p>
+    <%= label_tag "bio" %><br>
+    <%= text_area_tag "bio" %>
+  </p>
+ 
+  <p>
+    <%= submit_tag "Créer" %>
+  </p>
+<% end %>
+-->

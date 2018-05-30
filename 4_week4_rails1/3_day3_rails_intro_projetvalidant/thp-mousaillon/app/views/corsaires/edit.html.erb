@@ -1,0 +1,51 @@
+<%= form_for @corsaire do |f| %>
+
+<% if @corsaire.errors.any? %>
+    <div id="error_explanation">
+      <h3>
+        <%= pluralize(@corsaire.errors.count, "error") %> prohibited
+        this corsaire from being saved or updated:
+      </h3>
+      <ul>
+        <% @corsaire.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+   </br>
+
+    <%= f.label :bio %>
+    <%= f.text_field :bio %>
+    <%= f.label :slack_handle %>
+    <%= f.text_field :slack_handle %>
+    <%= f.label :github_handle %>
+    <%= f.text_field :github_handle %>
+</br>
+    <%= radio_button_tag(:likeness, "Kebab") %>
+    <%= label_tag(:age_child, "I like Kebab") %>
+    <%= radio_button_tag(:likeness, "Hummus") %>
+    <%= label_tag(:age_adult, "I like Hummus") %>
+    <%= f.submit 'Submit' %>
+
+
+<% end %>
+
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <%= link_to 'Destroy', @corsaire, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+            <td>
+                <%= link_to "Return to homepage", root_path %>
+            </td>
+        </tr>
+    </tbody>
+</table>

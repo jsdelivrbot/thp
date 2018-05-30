@@ -1,0 +1,133 @@
+<% content_for :top_content do %>
+
+<% if !(mousaillon_signed_in?) %>
+
+<div class="jumbotron">
+    <div class="container">
+      <h1>You need to register first in order to see the gossips</h1>
+    </div>
+</div>
+
+
+<% else mousaillon_signed_in? %>
+<div class="jumbotron">
+    <div class="container">
+      <h1>Welcome to the Gossip App!</h1>
+    </div>
+  </div>
+<% end %>
+<% end %>
+
+<% if mousaillon_signed_in? %>
+
+<div class="text-center text-information">
+<h2> <%= image_tag("fire.png", :alt => "rss feed", :size => '40x40') %> Trending gossips </h2></div>
+<hr>
+
+
+<div class="panel-group">
+    <% @trending_gossips.each do |tg| %>
+    <div class="panel panel-danger">
+        <div class="panel-heading"> <%= tg.number_likes %> Likes - <%= tg.title %> - Written by <%=tg.mousaillon.name%></div>
+        <div class="panel-body"><%=tg.content%></div>
+    </div>
+    <% end %>
+</div>
+
+
+</br>
+<div class="text-center text-information">
+<h2> All the gossips there is </h2></div>
+<hr>
+  <div class="container">
+   
+
+    <% @gossips.in_groups_of(3) do |g1, g2, g3|%>
+     <div class="row">
+    <div class ="col-md-3 well">
+          <h2> <strong><%= g1.title %></strong> </h2>
+
+          <p><%= g1.mousaillon.name %> - <em>Created <%= g1.created_at.strftime("At %H:%M on %d/%m/%Y") %> </em></p>
+          <p><%= g1.number_likes %> <span class="glyphicon glyphicon-thumbs-up"></span></p></br>
+          <p> <%= g1.content[0..70] %> [...]</p></br>
+          
+          <div class="row">
+            
+            <% if g1.likers.include?(current_mousaillon) %>
+                <div class ="col-md-2">
+                <p> <a href="#" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> </a>
+                             </p></div>
+            <% else %>
+                <div class ="col-md-2"><p>
+                    <%= link_to raw("<i class=\"glyphicon glyphicon-thumbs-up\"></i>"), like_gossip_path(g1), method: :post, class: "btn btn-success" %>
+                             </p></div>
+            <% end %>
+             <div class ="col-md-3 col-md-offset-1"> <%= link_to 'Show', g1, class: "btn btn-lg btn-info" %> </div> 
+             
+
+             <% if current_mousaillon == g1.mousaillon%>
+                <div class ="col-md-3 col-md-offset-1"> <%= link_to 'Delete', g1, method: :delete, class: "btn btn-lg btn-danger" %> </div> 
+             <% end %>
+         </div>
+    </div>
+
+
+    <div class ="col-md-3 col-md-offset-1 well">
+      <h2> <strong><%= g2.title %></strong> </h2>
+
+          <p><%= g2.mousaillon.name %> - <em>Created <%= g2.created_at.strftime("At %H:%M on %d/%m/%Y") %> </em></p>
+          <p><%= g2.number_likes %> <span class="glyphicon glyphicon-thumbs-up"></span></p></br>
+          <p> <%= g2.content[0..70] %> [...]</p></br>
+          
+          <div class="row">
+            
+            <% if g2.likers.include?(current_mousaillon) %>
+                <div class ="col-md-2">
+                <p> <a href="#" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> </a>
+                             </p></div>
+            <% else %>
+                <div class ="col-md-2"><p>
+                    <%= link_to raw("<i class=\"glyphicon glyphicon-thumbs-up\"></i>"), like_gossip_path(g2), method: :post, class: "btn btn-success" %>
+                             </p></div>
+            <% end %>
+             <div class ="col-md-3 col-md-offset-1"> <%= link_to 'Show', g2, class: "btn btn-lg btn-info" %> </div> 
+             
+
+             <% if current_mousaillon == g2.mousaillon%>
+                <div class ="col-md-3 col-md-offset-1"> <%= link_to 'Delete', g2, method: :delete, class: "btn btn-lg btn-danger" %> </div> 
+             <% end %>
+         </div>
+    </div>
+
+    <div class ="col-md-3 col-md-offset-1 well">
+      <h2> <strong><%= g3.title %></strong> </h2>
+
+          <p><%= g3.mousaillon.name %> - <em>Created <%= g3.created_at.strftime("At %H:%M on %d/%m/%Y") %> </em></p>
+          <p><%= g3.number_likes %> <span class="glyphicon glyphicon-thumbs-up"></span></p></br>
+          <p> <%= g3.content[0..70] %> [...]</p></br>
+          
+          <div class="row">
+            
+            <% if g3.likers.include?(current_mousaillon) %>
+                <div class ="col-md-2">
+                <p> <a href="#" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> </a>
+                             </p></div>
+            <% else %>
+                <div class ="col-md-2"><p>
+                    <%= link_to raw("<i class=\"glyphicon glyphicon-thumbs-up\"></i>"), like_gossip_path(g3), method: :post, class: "btn btn-success" %>
+                             </p></div>
+            <% end %>
+             <div class ="col-md-3 col-md-offset-1"> <%= link_to 'Show', g3, class: "btn btn-lg btn-info" %> </div> 
+             
+
+             <% if current_mousaillon == g3.mousaillon%>
+                <div class ="col-md-3 col-md-offset-1"> <%= link_to 'Delete', g3, method: :delete, class: "btn btn-lg btn-danger" %> </div> 
+             <% end %>
+         </div>
+    </div>
+  </div>
+    <% end %>
+
+  </div>
+
+<% end %>

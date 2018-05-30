@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Your results</h1> 
+    <p>Let's see what we have found</p> 
+    <%= link_to 'Search again', root_path, class: 'btn btn-primary'%>
+  </div>
+</div> </br>
+
+
+<% if !(@movies.nil?) %>
+<% if (@movies.empty?) %>
+   <div class="container">
+        <div class="bg-danger">
+            <h2> Sorry, we did not find any results</h2>
+      </div>
+    </div> 
+
+<% else %>
+    <% @movies.each do |l| %>
+ 
+        <div class="row z-depth-3">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                    <% if !(l.image_url=="#") %>
+                        <%= image_tag l.image_url %>
+                    <% end %>
+                </div>
+                <div class="col-sm-6">
+                  <ul>
+                    <li><strong>Title: </strong><%= l.title %></li>
+                    <li><strong>Release Date: </strong><%= l.release_date %></li>
+                    <li><strong>Director: </strong><%= l.director %></li>
+                  </ul>
+                </div>
+                <div class="col-sm-2"></div>
+        </div>
+    </br>
+    <% end %>
+<% end %>
+<% end %>

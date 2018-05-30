@@ -1,0 +1,38 @@
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid bg-danger">
+          
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+          </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav col-lg-3 center">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> U.S EDITION <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">INTERNATIONAL</a></li>
+                  <li><a href="#">MIDDLE EAST</a></li>
+                  <li><a href="#">PAKISTAN</a></li>
+                  <li><a href="#">POLSKA</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><%= DateTime.now.to_date %></a></li>
+          </ul>
+          <span class="col-lg-6 center"><%= image_tag("newsweek_logo.svg", :height => "35px") %></span>
+          
+          <ul class="nav navbar-nav navbar-right col-lg-3">
+              <li class=""><a href="#">SIGN-IN</a></li>
+              <li class="text-center" id="subscribe"><button class="btn btn-default text-danger"><span class="text-danger">Subscribe</span> <span class="glyphicon glyphicon-chevron-right text-danger"></span></button></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+    
+</div>

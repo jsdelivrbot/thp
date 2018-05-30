@@ -1,0 +1,70 @@
+body
+{
+	font-size: 1em;
+	font-family: sans-serif;
+	font
+}
+
+/*  La barre de navigation du header commence à droite et ne fait que 25% de la page */
+header
+{
+	display:flex;
+	justify-content: right;
+	width: 50%;
+}
+
+ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position:fixed; top:0; width: 100%;
+	background-color: #FFF;
+}
+
+/*  Les listes servant pour les nav bar haut centre et bas 
+sont ordonnées en ligne */
+li
+{
+	display:inline-block;
+}
+
+/*  Les liens sont de couleur grise de base */
+a
+{
+color:grey;
+}
+
+/*  Un lien classique est en gris souligné */
+.l-a:
+{
+	color:black;
+	text-decoration: none;
+}
+
+/*  Un passage de la souris sur les liens classique type visuel hyperlink met la police en noir */
+.l-a:hover
+{
+	color:black;
+}
+
+/*  Un lien visité à une couleur violette */
+.l-a:visited
+{
+	color: 102 0 153;
+}
+
+/*  Les liens type block à cliquer ont une couleur de fond bleue
+et une police blance */
+.l-c
+{
+background-color: blue
+color:white;
+}
+
+/*  Un passage de la souris sur les liens type "case à appuyer" 
+change la couleur de fond en noir */
+.l-c:hover
+{
+background-color: black
+}

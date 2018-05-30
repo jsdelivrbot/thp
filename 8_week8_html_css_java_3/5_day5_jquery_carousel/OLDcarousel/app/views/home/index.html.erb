@@ -1,0 +1,69 @@
+<!-- Header containing link to github-->
+    <header>
+        <h1 class="main-title" >A Carousel made by <a href="https://github.com/Asheraz">@Asheraz</a></h1>
+    </header>
+
+<!-- Wrapper containing all the main elements -->
+    <div class="container">
+        <!-- Carousel-->
+        <div id="carousel">
+            <div class="wrapper">
+                <div class="image">
+                    <%= image_tag("doug1.jpeg", class: "image-style") %> 
+                </div>
+                <div class="image">
+                    <%= image_tag("doug2.jpeg", class: "image-style") %> 
+                </div>
+                <div class="image">
+                    <%= image_tag("doug3.jpeg", class: "image-style") %> 
+                </div>
+                <div class="image">
+                    <%= image_tag("doug4.jpeg", class: "image-style") %> 
+                </div>
+                <div class="image">
+                    <%= image_tag("doug5.jpeg", class: "image-style") %> 
+                </div>
+                <div class="image">
+                    <%= image_tag("doug6.jpeg", class: "image-style") %> 
+                </div>
+                <!-- Buttons previous and next -->
+                <div id="prev" class="arrows"></div>
+                <div class="arrows" id="next"></div>
+            </div>
+
+        </div>
+
+        <div id="previews-container">
+            <div id="preview-prev" class="previews"></div>
+            <div id="preview-next" class="previews"></div>
+
+        </div>        
+        <!-- Dots -->
+        <div id="dots">
+            <ul>
+                <li class="dot active" id="0"></li>
+                <li class="dot" id="1"></li>
+                <li class="dot" id="2"></li> 
+                <li class="dot" id="3"></li>
+                <li class="dot" id="4"></li>
+                <li class="dot" id="5"></li>
+            </ul>
+            
+        </div><br>
+
+        <!-- Instructions -->
+        <div>
+            <h3> You can add any image directly into the html and it will work </h3><br>
+            <p>You just need to:</p>
+            <p>1) copy-paste the html from another image and duplicate it, and replace the link by one of yours</p>
+            <p>2) copy-paste the html from the last dot and replace its id by the highest "li" id incremented by +1.</p>
+
+        </div>
+        
+    
+    </div>
+
+<!-- Footer just for fun -->
+    <footer>
+        <h2 class="main-title" >A Carousel made by <a href="https://github.com/Asheraz">@Asheraz</a></h2>
+    </footer>

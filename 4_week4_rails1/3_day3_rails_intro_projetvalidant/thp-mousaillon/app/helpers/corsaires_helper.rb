@@ -1,0 +1,2 @@
+module CorsairesHelper
+end

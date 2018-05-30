@@ -1,0 +1,13 @@
+<h1> A nice gossip</h1> </br>
+<div class="panel-group">
+    <div class="panel panel-info">
+        <div class="panel-heading"><%=@gossip.title%> - <%=@gossip.number_likes%> likes</div>
+        <div class="panel-body"><%=@gossip.content%></div>
+        <% if current_mousaillon.gossips.include?(@gossip) %>
+        <div class="panel-footer">
+            <%= link_to "Edit", edit_gossip_path, class: "btn btn-lg btn-info" %>
+            <%= link_to 'Delete', @gossip, method: :delete, class: "btn btn-lg btn-warning" %>      
+            </div>
+        <% end %>
+    </div>
+</div>

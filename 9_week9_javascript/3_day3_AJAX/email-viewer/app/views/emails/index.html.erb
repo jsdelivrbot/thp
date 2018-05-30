@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+ 
+<h1>Emails</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Object</th>
+      <th>Body</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @emails.each do |email| %>
+      <% if email.read == false %>
+          <tr class="unread" <%= "id=tr"+ email.object.gsub(/\s+/, "") %>>
+        <% end %>
+        <% if email.read == true %>
+          <tr <%= "id=tr"+ email.object.gsub(/\s+/, "") %>>
+        <% end %>
+        <td><%= link_to email.object, email_appear_path(:email_id => email.id, :id_div => "div"+email.object.gsub(/\s+/, ""), :id_tr => "tr"+email.object.gsub(/\s+/, "")), remote:true %></td>
+        <td>
+          <div style="display:none;" <%= "id=div"+ email.object.gsub(/\s+/, "") %> >
+          <p><strong><%= email.object %></strong></p>
+          <p> <%= email.body %> </p>
+          <%= link_to 'Destroy', email, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        <td><%= link_to 'Edit', edit_email_path(email) %></td>
+      </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Email', new_email_path %>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://thehackingproject.herokuapp.com/cursus/semaine-3/jour-1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+
+    <link rel="stylesheet" media="all" href="./The Hacking Project 16 octobre_files/application-ba8fc79d1e4588a4c69e3f966347dc2eb61d17b52132876debcdbcac2c3cd82a.css" data-turbolinks-track="reload">
+    <script src="./The Hacking Project 16 octobre_files/application-abf83992d090a5fed5bf6ac842659c74ebb351307a43f1f2a319751e18653507.js" data-turbolinks-track="reload"></script>
+  <script src="./The Hacking Project 16 octobre_files/jquery.validate.min.js"></script>
+	<script src="./The Hacking Project 16 octobre_files/additional-methods.min.js"></script>
+  <link rel="stylesheet" href="./The Hacking Project 16 octobre_files/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="./The Hacking Project 16 octobre_files/tether.min.js"></script>
+  <script src="./The Hacking Project 16 octobre_files/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <title>The Hacking Project</title><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="3yw4OwsrMZgrM4XEIOBGOoXFXoOXkcSKrYz307ePqKSsz8DUelR4uylBu1pWBndrBWP6erV3oE24twwsII0FNw=="></head>
+
+  <body>
+    <br><br><br>
+    <div class="container">
+      <h1>Lundi 16 octobre : Jouer avec des excels</h1>
+<h2>1. Ressources</h2>
+<h3>a. Google_Drive</h3>
+<p>Aujourd'hui, tu vas apprendre à manipuler des spreadsheets à partir de Ruby, avec la gem google_drive. </p>
+
+<h5>À faire</h5>
+<ul>
+	<li>Découvre la <a href="https://github.com/gimite/google-drive-ruby">gem google_drive</a> de ruby
+	<ul>
+		<li>Si tu te sens l'âme d'un champion tu peux essayer de l'installer et manipuler tes premiers spreadsheets en suivant les instructions du repository Github de la gem (c'est ce que j'avais fait, car la doc est vraiment bien expliquée)</li>
+	</ul></li>
+	<li>Sinon, Twilio ont sorti <a href="https://www.twilio.com/blog/2017/03/google-spreadsheets-ruby.html">un super tutorial</a> pour ta première manipulation de spreadsheet</li>
+</ul>
+
+<h3>b. Enregistrer en JSON</h3>
+<p>Cette leçon te servira si tu as envie de faire la partie optionnelle du projet sur la sauvegarde de fichiers.</p>
+<p>C'est très pratique de savoir enregistrer des fichiers pour les réutiliser plus tard. Tu peux le faire dans plein de format différents, mais JSON est un format assez classique pour le travail. </p>
+
+<h5>À faire</h5>
+<ul>
+	<li>Le format JSON est en gros un format de fichier qui permet de sauvegarder pour réutiliser plus tard des data types, tels que des hash, ou des arrays. JSON a l'avantage d'être lisible par un humain, et par tout langage de programmation. <a href="https://www.w3schools.com/js/js_json_intro.asp">W3Schools ont fait un récap rapide</a> à ce sujet</li>
+	<li>Découvre comment lire un fichier JSON avec <a href="https://www.tutorialspoint.com/json/json_ruby_example.htm">ce tutoriel sympathique</a></li>
+	<li>Enfin, <a href="https://stackoverflow.com/a/5507535/8564105">cette réponse</a> mentionne comment écrire un fichier JSON à partir d'un objet ruby.</li>
+</ul>
+
+<h2>2. Projet</h2>
+<p>Ce projet te permet de mettre en application tes connaissances en gestion de fichiers pour sauvegarder toutes les données que tu récupères dans des beaux fichiers. 
+Tout d'abord, nous allons voir comment les sauvegarder dans un spreadsheet, un outil qui a une belle interface graphique, très pratique pour gérer des longs listings à la main. 
+Ensuite, les plus courageux pourront s'entrainer à sauvegarder les données dans des fichiers plus conventionnels.</p>
+
+
+<h3>a. Google Spreadsheet</h3>
+
+<p>Le CEO de get-email-corp est très content de ton travail de scrapping d'email. Cependant, ce dernier est un peu old school et ne comprend pas comment on peut obtenir la liste d'emails à partir d'un fichier <em>scrapping.rb</em>. Il refuse de faire The Hacking Project, tu te dis donc que la seule façon de lui fournir ces emails est de le faire dans un fichier Google Spreadsheet. Ta mission est donc de trouver un moyen de faire un fichier Google Spreadsheet qui contient en <em>colonne A</em> les noms des villes, et en <em>colonne B</em> les emails des dites mairies.</p>
+
+<p>Nous te conseillons de travailler sur un fichier spreadsheet que tu vas créer pour l'occasion. <a href="https://github.com/gimite/google-drive-ruby#example-to-readwrite-spreadsheets">Ces quelques lignes de code</a> devraient t'indiquer comment ouvrir un spreadsheet à partir de ruby.</p>
+
+<p>Il se peut que tu ais enregistré le résultat de ton scrapping au format suivant : <code>{"ABLEIGES"=&gt;"&nbsp;mairie.ableiges95@wanadoo.fr", "AINCOURT"=&gt;"&nbsp;mairie.aincourt@wanadoo.fr", etc }</code>. Du coup, il te faut passer sur chaque couple clé-valeur du hash. Cet élément va ajouter une ligne dans le spreadsheet, et changera les colonnes A et B pour y mettre respectivement le nom et l'email. Évidemment, cela peut changer en fonction du format de data type que tu as utilisé lors du scrapping du site.</p>
+
+<p>Pour t'aider à vaincre le syndrome de la page blanche, voici quelques méthodes qui te seront pratiques pour ton fichier :</p>
+
+<ul>
+	<li>setup_spreadsheet</li>
+	<li>get_the_hash_that_I_scrapped_few_days_ago</li>
+	<li>go_through_each_element_of_hash
+	<ul>
+		<li>get_the_name_and_put_it_in_spreadsheet</li>
+		<li>get_the_email_and_put_it_in_spreadsheet</li></ul></li>
+	</ul>
+
+<p>.</p>
+
+<h3>b. Enregistrer dans un fichier</h3>
+
+<p><em>(cette partie est optionnelle et est pour ceux qui s'ennuient)</em></p>
+
+<p>Les spreadsheet, c'est le bien. Mais des fois les classiques, c'est mieux. Enregistre les données que tu as scrappées dans un fichier JSON.</p>
+<p>Puis après enregistre les données dans un CSV, format très classique pour faire des tableaux. Pour cette partie du projet, nous ne te donnerons pas de ressources, et tu devras trouver toi-même comment enregistrer des données en CSV 😎</p>
+    </div>
+    <br><br><br><br><br><br>
+
+<footer class="footer">
+  <div class="container">
+    <span class="text-muted">© <a href="http://www.thehackingproject.org/mentions">The Hacking Project, 2017</a></span>
+  </div>
+</footer>
+
+  
+
+</body></html>

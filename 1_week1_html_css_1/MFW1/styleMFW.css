@@ -1,0 +1,31 @@
+blockquote
+{
+	display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px;
+}
+
+body
+{
+	display: block;
+	justify-content: center;
+	margin-left: 25%;
+	margin-right: 25%;
+	color: grey;
+}
+
+.MEA
+{
+	font font-family: arial;
+	font-style: italic;
+	font-size: 20px;
+}
+
+ul
+{
+	display:flex;
+	justify-content: center;
+	margin:auto;
+}

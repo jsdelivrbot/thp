@@ -1,0 +1,278 @@
+body {
+    height: 100%;
+    background: #eceef1;
+}
+
+.sign-in-bar {
+    width: 100%;
+    height: 70px;
+    padding-top: 2px
+}
+ 
+.existing-sign-in {
+    float: right;
+    -webkit-margin-before: 0;
+    margin-right: 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: right;
+}
+
+button {
+    cursor: pointer; 
+}
+
+.sign-in-button {
+    height: 34px;
+    width: 102px;
+    float: right;
+    margin-right: 23px;
+    background: linear-gradient(to bottom,#0077C5 0,#167CCC 100%);
+    border: 1px solid #4c4c4c;
+    border-radius: 3px;
+    padding-top: 0;
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.button-text {
+    color: white;
+    font-size: 14px;
+}
+
+.logo-holder-bar {
+    width: 100%;
+    height: 55px;
+    text-align:center;
+}
+
+.small-logo-holder-bar {
+    width: 100%;
+    height: 55px;
+    text-align:center;
+    zoom: 40%;
+}
+
+a:link {
+    text-decoration: none;
+    color: #0077C5;
+}
+
+
+.centered_logo{
+    margin: 0 auto;
+}
+
+.samll-centered_logo{
+    margin: 0 auto;
+}
+
+label, p, h1, small {
+    font-family: 'AvenirNext',Avenir,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #404040;
+}
+
+.mini-logos {
+    height: 60px;
+    border-bottom: 1px solid #C1C5C8;
+}
+
+.mini-logo-list {
+    -webkit-padding-start: 0;
+    padding-top: 13px
+}
+
+.mini-logo-list li {
+    display: inline;
+}
+
+.ttlogo {
+    background-position: 0px 23px;
+    width: 114px;
+}
+
+.qblogo {
+    background-position: 238px 23px;
+    width: 127px;
+}
+
+.mtlogo {
+    background-position: 97px 23px;
+    width: 60px;
+}
+
+.mini-logos {
+    
+   .mini-logo-holder 
+   {
+    height: 23px;
+    display: inline-block;
+    padding-right: 3px;
+    font-size: 18px;
+    }
+    a:link
+    {
+    color: #808080 !important;
+    }
+    a:visited
+    {
+    color: #808080 !important;
+    }
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.sub-header {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.learn-more {
+    font-size: 12px;
+}
+
+fieldset {
+    border: none;
+    padding: 8px 0 20px 0 ;
+}
+
+.input-field {
+    box-sizing: border-box;
+    width: 320px;
+    min-width: 160px;
+    height: 34px;
+    padding-left: 8px;
+    padding-right: 6px;
+    margin: 8px 0;
+    border-radius: 3px;
+    border: 1px solid #C1C5C8;
+    box-shadow: -1px 1px 1px 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+.input-container {
+    position: relative;
+}
+
+.lock-left-image {
+    position: absolute;
+    top: 14px;
+    right: 2px;
+    background-size: 66% 66%;
+    height: 32px;
+    width: 33px;
+}
+ 
+.sign-up-form {
+    box-sizing: border-box;
+    margin: auto;
+    width: 380px;
+    padding: 0 30px 0 30px;
+    border: 1px solid #C1C5C8;
+    background: white;
+}
+ 
+.submit-button {
+    width: 320px;
+    height: 44px;
+    padding: 6px 12px;
+    background: linear-gradient(to bottom,#0077C5 0,#167CCC 100%);
+    color: white;
+    font-size: 16px;
+    border: 1px solid #0077C5;
+    border-radius: 3px;
+}
+
+
+.disclaimer {
+    -webkit-margin-before: 0;
+    font-size: 10px;
+}
+
+.legal {
+    box-sizing: border-box;
+    margin: 40px;
+    font-size: 12px;
+    line-height: 1.5
+}
+
+.captchaHolder {
+    background: #eceef1;
+    width: 376px;
+    height: 46px;
+    margin-left: -29px;
+    padding-top: 12px;
+}
+
+.captcha {
+    font-size: 10px;
+    text-align: center;
+}
+
+.footer-logo {
+    display: block;
+    height: 40px;
+    width: 92px;
+    background-size: cover;
+    background-position: 0 0;
+    margin: auto;
+    -webkit-margin-before: 30px;
+}
+
+.footer-links-holder {
+    width: 225px;
+    margin: auto;
+}
+
+.footer-links {
+    -webkit-margin-after: 0;
+}
+
+.footer-links li {
+    display: inline;
+    padding: 0 4px;
+}
+
+.footer-smallprint {
+    width: 750px;
+    margin: auto;
+    text-align: center
+}
+
+.footer-smallprint small {
+    font-size: 12px;
+}
+
+.footer-link-text {
+    font-family: 'AvenirNext',Avenir,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #404040;
+}
+
+.light_grey { 
+    color: #909090
+}
+
+.md-light {
+    color: white;
+    font-size: 18px;
+    margin-top: 3px;
+    margin-right: 4px;
+    float: left;
+}
+
+.sign-in-text {
+    color: white;
+    font-weight: 300;
+    margin-top: 3px;
+}

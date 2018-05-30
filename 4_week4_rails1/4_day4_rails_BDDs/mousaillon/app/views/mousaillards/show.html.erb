@@ -1,0 +1,65 @@
+<h1>Vaillant mousaillard!!</h1></br>
+<h2>What you are</h2> </br>
+<table>
+    <tbody>
+        <tr>
+            <td>Username</td>
+            <td>Email</td>
+            <td>Bio</td>
+        </tr>
+        <tr>
+            <td><%= @mousaillard.username %></td>
+            <td><%= @mousaillard.email %></td>
+            <td><%= @mousaillard.bio %></td>
+        </tr>
+    </tbody>
+</table> </br>
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <%= link_to "Edit", edit_mousaillard_path %>
+            </td>
+            <td>
+            <td>
+                <%= link_to "Return to mousaillard list", mousaillards_path %>
+            </td>
+        </tr>
+    </tbody>
+</table></br>
+
+<h2>What you gossip about</h2></br>
+ <table>
+<thead>
+    <tr>
+      <th>Content</th>
+      <th>Last update</th>
+      <th>Author</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+ <tbody>
+    <% @gossips.each do |g| %>
+      <tr>
+        <td><%= g.content%></td>
+        <td><%= g.updated_at %></td>
+        <td><%= g.author %></td>
+        <td><%= link_to 'Gossip page', g %></td>
+        <td><%= link_to 'Destroy', g, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+      </tr></br>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>Add a new gossip</h2></br>
+<div>
+    <%= form_for @gossip do |f| %>
+      <%= f.label :content %>
+      <%= f.text_field :content %> </br>
+      <%= f.hidden_field :mousaillard_id, :value => @mousaillard.id %>
+      <%= f.hidden_field :author, :value => @mousaillard.username %>
+      <%= f.submit %>
+    <% end %>
+</div>
+</table>

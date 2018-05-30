@@ -1,0 +1,27 @@
+<h1>Create a new Corsaire</h1>
+
+<%= form_for @corsaire do |f| %>
+
+<% if @corsaire.errors.any? %>
+    <div id="error_explanation">
+      <h3>
+        <%= pluralize(@corsaire.errors.count, "error") %> prohibited
+        this corsaire from being saved or updated:
+      </h3>
+      <ul>
+        <% @corsaire.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+    <%= f.submit 'Submit' %>
+
+<% end %>
+
+<%= link_to "Return to homepage", root_path %>

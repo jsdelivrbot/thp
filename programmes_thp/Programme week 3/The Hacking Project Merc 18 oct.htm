@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://thehackingproject.herokuapp.com/cursus/semaine-3/jour-3 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+
+    <link rel="stylesheet" media="all" href="./The Hacking Project Merc 18 oct_files/application-ba8fc79d1e4588a4c69e3f966347dc2eb61d17b52132876debcdbcac2c3cd82a.css" data-turbolinks-track="reload">
+    <script src="./The Hacking Project Merc 18 oct_files/application-abf83992d090a5fed5bf6ac842659c74ebb351307a43f1f2a319751e18653507.js" data-turbolinks-track="reload"></script>
+  <script src="./The Hacking Project Merc 18 oct_files/jquery.validate.min.js"></script>
+	<script src="./The Hacking Project Merc 18 oct_files/additional-methods.min.js"></script>
+  <link rel="stylesheet" href="./The Hacking Project Merc 18 oct_files/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="./The Hacking Project Merc 18 oct_files/tether.min.js"></script>
+  <script src="./The Hacking Project Merc 18 oct_files/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <title>The Hacking Project</title><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="kH6Ip0y86+84NRxKvTrSNGhYW/VbN5xNihdES/cT6UjjnXBIPcOizDpHItTL3ONl6P7/DHnR+IqfLL+0YBFE2w=="></head>
+
+  <body>
+    <br><br><br>
+    <div class="container">
+      <h1>Mercredi 18 octobre : Découverte de la POO</h1>
+<p>Ce projet est une leçon avec des exercices qui te permettra de solidifier tes notions en POO. En suivant cette leçon, tu seras capable de comprendre comment marche Ruby en POO, et même de créer des programmes en POO.</p>
+
+
+<h3>a. Introduction à la POO</h3>
+<p>Voici <a href="https://github.com/ga-wdi-lessons/ruby-oop">un merveilleux</a> repo Github d'un cours de 2h avec des exercices et des quizzes à l'introduction à la POO. Le cours est à la base pour des personnes qui viennent de JavaScript, donc pas la peine de baliser si tu ne comprends pas les parties qui traitent de JS 😉</p>
+
+<p>Le cours va <a href="https://github.com/ga-wdi-lessons/ruby-oop#you-do-monkies-20-minutes--120">à un moment</a> te faire faire un exercice où tu vas créer une classe <code>Monkey</code>. L'exercice est TDD, c'est à dire qu'il y a des tests que tu devras réussir, et toute les specs de l'exercice sont dans les tests. L'exercice explique bien comment faire, sauf UN détail. Si tu ne créés pas de classe Monkey dans ton fichier, rspec va te renvoyer une erreur du genre</p>
+
+<pre><code>     /Users/felix/Documents/Projets/Code/thp/00NewSessions/oop_monkey/spec/monkey_spec.rb:4:in `&lt;top (required)&gt;': uninitialized constant Monkey (NameError)
+    from /Users/felix/.rvm/gems/ruby-2.3.1/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1327:in `load'
+    from /Users/felix/.rvm/gems/ruby-2.3.1/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1327:in `block in load_spec_files'
+    from /Users/felix/.rvm/gems/ruby-2.3.1/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1325:in `each'
+    from /Users/felix/.rvm/gems/ruby-2.3.1/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1325:in `load_spec_files'
+    from /Users/felix/.rvm/gems/ruby-2.3.1/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:102:in `setup'
+    from /Users/felix/.rvm/gems/ruby-2.3.1/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:88:in `run'
+    from /Users/felix/.rvm/gems/ruby-2.3.1/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:73:in `run'
+    from /Users/felix/.rvm/gems/ruby-2.3.1/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:41:in `invoke'
+    from /Users/felix/.rvm/gems/ruby-2.3.1/gems/rspec-core-3.3.2/exe/rspec:4:in `&lt;top (required)&gt;'
+    from /Users/felix/.rvm/gems/ruby-2.3.1/bin/rspec:23:in `load'
+    from /Users/felix/.rvm/gems/ruby-2.3.1/bin/rspec:23:in `&lt;main&gt;'
+    from /Users/felix/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+    from /Users/felix/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `&lt;main&gt;'
+</code></pre>
+
+<p>Créé donc une <code>class Monkey</code> pour solver ça.</p>
+
+<p>Tu vas tomber en fin de README sur un <a href="https://github.com/ga-wdi-exercises/scrabbler">exercice de Scrabbler</a>. Fais-le aussi.</p>
+
+<p>Enfin, il y a aussi une partie <a href="https://github.com/ga-wdi-lessons/ruby-oop#resources">autres exercices</a>, que tu peux faire aussi, pour être un choo de la poo !</p>
+
+<h3>b. POO niveau intermédiaire</h3>
+
+<p>Afin d'obtenir les dernières notions importantes de POO, nous t'invitons à faire la partie de <a href="https://github.com/felhix/ruby-oop-inheritance">POO intermédiaire</a>. </p>
+
+<p>Après, tu peux faire la partie <a href="https://github.com/felhix/ruby-oop-inheritance#extra-material-modules">Extra Material: Modules</a>.</p>
+    </div>
+    <br><br><br><br><br><br>
+
+<footer class="footer">
+  <div class="container">
+    <span class="text-muted">© <a href="http://www.thehackingproject.org/mentions">The Hacking Project, 2017</a></span>
+  </div>
+</footer>
+
+  
+
+</body></html>

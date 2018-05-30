@@ -1,0 +1,31 @@
+<h1>Edit yourself Mousaillard</h1>
+
+
+<div>
+    <%= form_for @mousaillard do |f| %>
+    <%= render 'shared/error_messages' %>
+      <%= f.label :username %>
+      <%= f.text_field :username %> </br>
+
+      <%= f.label :email %>
+      <%= f.email_field :email %></br>
+    
+      <%= f.label :bio %>
+      <%= f.text_field :bio %></br>
+
+      <%= f.submit %>
+    <% end %>
+</div>
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <%= link_to 'Destroy', @mousaillard, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+            <td>
+                <%= link_to "Return to mousaillard list", mousaillards_path %>
+            </td>
+        </tr>
+    </tbody>
+</table>

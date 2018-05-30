@@ -1,0 +1,53 @@
+body
+
+{
+	background-color: rgb(80,200,60);
+	background: url("neige.jpg");
+	background-attachment: fixed;
+	background-position: 100px 100px
+}
+
+h1
+{
+	color: rgb(230,40,150);
+	text-align:right, justify;
+	background-color: rgb(80,120,60);
+	opacity: 0.8;
+
+	border-bottom: 3px blue ridge;
+	border-radius: 20px;
+	box-shadow: 6px 6px 6px black inset;
+	text-shadow: 6px 6px 6px red;
+}
+
+
+
+.flottant
+{float: left;}
+
+.autrepara
+{
+	color: blue;
+	font-style: italic;
+	clear: both;}
+
+
+	p
+{
+	color: green;
+	font-size: 1em;
+	font-family: Impact, "Arial Black"
+	text-align: justify;
+}
+
+a:active
+{
+color:green;
+}
+
+p:hover
+{
+border-left: 15px solid orange;
+   text-decoration: underline;
+   color: green;
+}

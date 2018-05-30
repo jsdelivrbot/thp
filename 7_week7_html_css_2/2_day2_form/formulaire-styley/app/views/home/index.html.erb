@@ -1,0 +1,25 @@
+
+
+<ul>
+	<% if user_signed_in? %>
+		<h2> <%= link_to "Regarde les vidéos", '/videos' %></h2>
+
+		<li> 
+			<%= link_to "Edit account", edit_user_registration_path %>
+		</li>	
+		<li> 
+			<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+		</li>
+
+	<% else %>
+
+	<h1>Hey bro connecte-toi ou inscris-toi !</h1>
+		<li> 
+			<%= link_to "Sign In", new_user_session_path %>
+		</li>
+	
+		<li> 
+			<%= link_to "Sign Up", new_user_registration_path %>
+		</li>
+	<% end %>
+</ul>
